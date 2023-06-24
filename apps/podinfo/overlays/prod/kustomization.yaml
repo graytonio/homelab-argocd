@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - ../../base
 helmCharts:
-  - name: podinfo
-    valuesMerge: merge
-    valuesInline:
-      replicas: 5 
+- name: podinfo
+  valuesMerge: merge
+  valuesInline:
+    replicas: 5 
