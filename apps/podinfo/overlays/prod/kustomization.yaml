@@ -4,5 +4,6 @@ resources:
 - ../../base
 helmCharts:
   - name: podinfo
+    valuesMerge: merge
     valuesInline:
       replicas: 5 
