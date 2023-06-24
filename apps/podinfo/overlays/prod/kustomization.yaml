@@ -8,8 +8,5 @@ helmCharts:
   releaseName: podinfo
   version: 6.3.6
   repo: https://stefanprodan.github.io/podinfo
-  valuesFile: ../../base/values.yaml
-  valuesMerge: merge
-  valuesInline:
-    replicas: 5
+  valuesFile: values.yaml
     
