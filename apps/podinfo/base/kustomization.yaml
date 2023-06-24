@@ -8,3 +8,5 @@ helmCharts:
   releaseName: podinfo
   version: 6.3.6
   repo: https://stefanprodan.github.io/podinfo
+  valuesInline:
+    replicas: 3
