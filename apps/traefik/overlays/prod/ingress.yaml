@@ -4,7 +4,6 @@ metadata:
   name: traefik-dashboard
 spec:
   routes:
-    - $patch: replace
     - match: Host(`traefik.graytonward.com`) && PathPrefix(`/`)
       kind: Rule
       services:
