@@ -73,7 +73,7 @@ spec:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ .appName }}'
       annotations:
-        argocd.argoproj.io/sync-wave: '{{ default 5 .syncWave }}'
+        argocd.argoproj.io/sync-wave: '{{ default "5" .syncWave }}'
       name: prod-{{ .userGivenName }}
       namespace: argocd
     spec:
