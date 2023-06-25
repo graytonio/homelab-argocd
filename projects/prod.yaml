@@ -71,6 +71,8 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{ or syncWave 5 }}'
       name: prod-{{ userGivenName }}
       namespace: argocd
     spec:
