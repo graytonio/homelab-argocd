@@ -7,6 +7,7 @@
   "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
   "srcTargetRevision": "",
   "syncWave": "0",
+  "appRole": "infra",
   "labels": null,
   "annotations": null
 }
