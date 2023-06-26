@@ -4,4 +4,8 @@ resources:
 - ../../base
 patchesStrategicMerge:
 - ingress.yaml
-- deployment.yaml
+patches:
+- path: deployment.yaml
+  target:
+    kind: Deployment
+    name: traefik-deployment
