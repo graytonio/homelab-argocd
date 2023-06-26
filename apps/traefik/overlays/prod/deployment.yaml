@@ -1,0 +1,12 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: traefik-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: traefik
+          args:
+            - --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
+            - --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
