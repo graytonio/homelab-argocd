@@ -13,8 +13,8 @@ $(ENVS): $(APPS)
 .PHONY: $(APPS)
 $(APPS):
 	flagops generate -r -s apps/$@/overlays/ -d build/apps/$@/overlays/${MAKECMDGOALS}
-	@mkdir -p build/apps/$@/base
-	cp -r apps/$@/base build/apps/$@/base
+	@mkdir -p build/apps/$@
+	cp -r apps/$@/base build/apps/$@
 	@echo "Built $@"
 
 .PHONY: bootstrap
