@@ -3,7 +3,7 @@
   "userGivenName": "demoapp",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
-  "srcPath": "apps/demoapp/overlays/prod",
+  "srcPath": "build/apps/demoapp/overlays/prod",
   "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
   "srcTargetRevision": "",
   "labels": null,
