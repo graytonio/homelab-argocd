@@ -1,0 +1,6 @@
+- op: replace
+  path: /spec/template/spec/containers/0/args/0
+  value: --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
+- op: replace
+  path: /spec/template/spec/containers/0/args/1
+  value: --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com

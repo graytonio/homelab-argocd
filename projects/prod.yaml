@@ -37,7 +37,7 @@ spec:
   generators:
   - git:
       files:
-      - path: apps/**/prod/config.json
+      - path: build/apps/**/prod/config.json
       repoURL: https://github.com/graytonio/homelab-argocd.git
       requeueAfterSeconds: 20
       revision: ""
@@ -50,7 +50,7 @@ spec:
             repoURL: ""
   - git:
       files:
-      - path: apps/**/prod/config_dir.json
+      - path: build/apps/**/prod/config_dir.json
       repoURL: https://github.com/graytonio/homelab-argocd.git
       requeueAfterSeconds: 20
       revision: ""

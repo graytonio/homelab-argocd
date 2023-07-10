@@ -1,0 +1,7 @@
+dest: build
+filters:
+- blank
+provider: flagsmith
+providerConfig:
+  apiKey: 3PkeYraLv6Zfiemw28Wdhx
+  baseUrl: http://localhost:8000/api/v1/

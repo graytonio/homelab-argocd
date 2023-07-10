@@ -1,13 +1,11 @@
 {
-  "appName": "traefik",
-  "userGivenName": "traefik",
-  "destNamespace": "traefik",
+  "appName": "demoapp",
+  "userGivenName": "demoapp",
+  "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
-  "srcPath": "apps/traefik/overlays/prod",
+  "srcPath": "apps/demoapp/overlays/prod",
   "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
   "srcTargetRevision": "",
-  "syncWave": "0",
-  "appRole": "infra",
   "labels": null,
   "annotations": null
 }

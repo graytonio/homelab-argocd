@@ -1,0 +1,14 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: prod
+  namespace: metallb-system
+spec:
+  addresses:
+  - {{ metallb_ip_advertisement }}
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: prod
+  namespace: metallb-system
