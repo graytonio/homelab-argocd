@@ -17,19 +17,12 @@ spec:
         - name: traefik
           image: traefik:v2.10
           args:
-            - --entrypoints.websecure.http.tls.domains[0].main=example.com
-            - --entrypoints.websecure.http.tls.domains[0].sans=*.example.com
             - --api.insecure
             - --accesslog
             - --entrypoints.web.Address=:80
             - --entrypoints.websecure.Address=:443
             - --providers.kubernetesingress
             - --providers.kubernetescrd
-            - --entrypoints.websecure.http.tls.certresolver=cloudflare
-            - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
-            - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
-            - --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
-            - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
           ports:
             - name: web
               containerPort: 80
@@ -60,17 +53,3 @@ spec:
       port: 8080
   selector:
     app: traefik
----
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
-metadata:
-  name: traefik-dashboard
-spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`traefik.example.com`) && PathPrefix(`/`)
-      kind: Rule
-      services:
-        - name: traefik-service
-          port: dashboard

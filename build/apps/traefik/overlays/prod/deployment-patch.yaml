@@ -1,6 +1,21 @@
-- op: replace
-  path: /spec/template/spec/containers/0/args/0
+- op: add
+  path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
-- op: replace
-  path: /spec/template/spec/containers/0/args/1
+- op: add
+  path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --entrypoints.websecure.http.tls.certresolver=cloudflare
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
