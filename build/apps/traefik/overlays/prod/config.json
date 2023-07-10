@@ -3,7 +3,7 @@
   "userGivenName": "traefik",
   "destNamespace": "traefik",
   "destServer": "https://kubernetes.default.svc",
-  "srcPath": "build/apps/traefik/overlays/prod",
+  "srcPath": "build/apps/traefik/overlays",
   "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
   "srcTargetRevision": "",
   "syncWave": "-1",
