@@ -3,5 +3,4 @@ filters:
 - blank
 provider: flagsmith
 providerConfig:
-  apiKey: 3PkeYraLv6Zfiemw28Wdhx
-  baseUrl: http://localhost:8000/api/v1/
+  apiKey: 6PETFGv6zuFa22YHvWu5Uk
