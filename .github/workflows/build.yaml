@@ -1,5 +1,12 @@
 name: Build K8S Manifests
-on: push
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  repository_dispatch:
+    types:
+      - FLAG_UPDATED
 permissions:
   contents: write
 jobs:
