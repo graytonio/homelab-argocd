@@ -9,7 +9,9 @@ jobs:
               with:
                 go-version: '1.20'
             - run: go install github.com/graytonio/flagops@latest
+            - run: make prod # TODO staging -> production
             - uses: EndBug/add-and-commit@v9
               with:
+                message: Rebuild Deployed Infrastructure
                 committer_name: FlagOps
                 committer_email: actions@github.com
