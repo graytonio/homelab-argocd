@@ -1,5 +1,7 @@
 name: Build K8S Manifests
 on: push
+permissions:
+  contents: write
 jobs:
     build-infra:
         runs-on: ubuntu-latest
