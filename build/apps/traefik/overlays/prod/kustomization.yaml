@@ -7,11 +7,11 @@ resources:
 - ssl-cert-pvc.yaml
 - sealed-cloudflare-credentials.yaml
 patches:
-- path: deployment-ssl-patch.yaml
+- path: deployment-args-patch.yaml
   target:
     kind: Deployment
     name: traefik-deployment
-- path: deployment-log-level.yaml
+- path: deployment-ssl-patch.yaml
   target:
     kind: Deployment
     name: traefik-deployment

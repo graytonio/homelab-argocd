@@ -9,17 +9,6 @@ spec:
         - name: ssl-certs
           persistentVolumeClaim:
             claimName: traefik-ssl-certs
-      containers:
-        - name: traefik
-          args:
-            - --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
-            - --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
-            - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
-            - --entrypoints.websecure.http.tls.certresolver=cloudflare
-            - --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
-            - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
-            - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
-            - --certificatesresolvers.cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
           env:
           - name: CF_API_EMAIL
             valueFrom:
