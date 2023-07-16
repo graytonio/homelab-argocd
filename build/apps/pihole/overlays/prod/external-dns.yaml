@@ -58,7 +58,6 @@ spec:
               name: pihole-web-password
               key: password
         args:
-        - --source=traefik
         - --source=service
         - --source=ingress
         - --registry=noop
