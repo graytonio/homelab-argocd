@@ -1,0 +1,13 @@
+{
+  "appName": "pihole",
+  "userGivenName": "pihole",
+  "destNamespace": "pihole",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "build/apps/pihole/overlays",
+  "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+  "srcTargetRevision": "",
+  "syncWave": "-1",
+  "appRole": "infra",
+  "labels": null,
+  "annotations": null
+}
