@@ -79,10 +79,8 @@ spec:
             - '$src/{{ .srcPath }}/prod/values.yaml'
         - repoURL: '{{ .srcRepoURL }}'
           targetRevision: '{{ .srcTargetRevision }}'
-          ref: 'src'
-        - repoURL: '{{ .srcRepoURL }}'
-          targetRevision: '{{ .srcTargetRevision }}'
           path: '{{if .additionalResources}} {{ .srcPath }}/prod {{end}}'
+          ref: 'src'
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
