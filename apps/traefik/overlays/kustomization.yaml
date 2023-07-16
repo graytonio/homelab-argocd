@@ -6,6 +6,7 @@ resources:
 {% if traefik_ssl_enabled %}
 - dashboard-ingress.yaml
 - ssl-cert-pvc.yaml
+- sealed-cloudflare-credentials.yaml
 {% endif %}
 patches:
 {% if traefik_ssl_enabled %}
