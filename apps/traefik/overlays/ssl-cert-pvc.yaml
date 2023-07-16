@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: treafik-ssl-certs
 spec:
-  accessModes: [ "ReadWriteMany" ]
+  accessModes: [ "ReadWriteOnce" ]
   resources:
    requests:
      storage: 128Mi
