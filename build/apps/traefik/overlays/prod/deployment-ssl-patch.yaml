@@ -10,12 +10,12 @@ spec:
           persistentVolumeClaim:
             claimName: traefik-ssl-certs
           env:
-          - name: CF_API_EMAIL
+          - name: CLOUDFLARE_EMAIL
             valueFrom:
               secretKeyRef:
                 key: email
                 name: cloudflare-api-credentials
-          - name: CF_API_KEY
+          - name: CLOUDFLARE_DNS_API_TOKEN
             valueFrom:
               secretKeyRef:
                 key: apiKey
