@@ -22,6 +22,7 @@ spec:
             - --entrypoints.web.Address=:80
             - --entrypoints.websecure.Address=:443
             - --providers.kubernetesingress
+            - --providers.kubernetesingress.ingressEndpoint.publishedService=traefik/traefik-service
             - --providers.kubernetescrd
           ports:
             - name: web
