@@ -1,6 +1,6 @@
-Kind: PersistentVolumeClaim
-Apiversion: v1
-Metadata:
+kind: PersistentVolumeClaim
+apiversion: v1
+metadata:
   name: traeifk-ssl-certs
 spec:
   accessModes: [ "ReadWriteMany" ]
