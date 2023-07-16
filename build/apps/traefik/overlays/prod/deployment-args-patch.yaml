@@ -1,15 +1,15 @@
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.letsencrypt.acme.dnschallenge=true
+  value: --certificatesresolvers.cloudflare.acme.dnschallenge=true
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=cloudflare
+  value: --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.letsencrypt.acme.email=g-buddy@comcast.net
+  value: --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.letsencrypt.acme.storage=/certs/acme.json
+  value: --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
 # - op: add
 #   path: /spec/template/spec/containers/0/args/-
 #   value: --entrypoints.web.http.redirections.entrypoint.to=websecure
@@ -18,10 +18,7 @@
 #   value: --entrypoints.web.http.redirections.entrypoint.scheme=https
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.websecure.http.tls=true
-- op: add
-  path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.websecure.http.tls.certResolver=letsencrypt
+  value: --entrypoints.websecure.http.tls.certResolver=cloudflare
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
