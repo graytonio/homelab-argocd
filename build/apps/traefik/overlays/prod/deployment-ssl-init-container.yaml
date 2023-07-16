@@ -3,19 +3,21 @@ apiVersion: apps/v1
 metadata:
   name: treafik-deployment
 spec:
-  volumes:
-    - name: ssl-certs
-      persistentVolumeClaim:
-        claimName: traeifk-ssl-certs
-  containers:
-    - name: traefik
-      volumeMounts:
-      - mountPath: "/certs"
-        name: ssl-certs
-  initContainers:
-    - name: volume-permissions 
-      image: busybox:1.31.1 
-      command: ["sh", "-c", "chmod -Rv 600 /certs/*"] 
-      volumeMounts: 
-        - name: certs 
-          mountPath: /certs
+  template:
+    spec:
+      volumes:
+        - name: ssl-certs
+          persistentVolumeClaim:
+            claimName: traeifk-ssl-certs
+      containers:
+        - name: traefik
+          volumeMounts:
+          - mountPath: "/certs"
+            name: ssl-certs
+      initContainers:
+        - name: volume-permissions 
+          image: busybox:1.31.1 
+          command: ["sh", "-c", "chmod -Rv 600 /certs/*"] 
+          volumeMounts: 
+            - name: certs 
+              mountPath: /certs
