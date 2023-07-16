@@ -1,0 +1,32 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: treafik-deployment
+spec:
+  template:
+    spec:
+      volumes:
+        - name: ssl-certs
+          persistentVolumeClaim:
+            claimName: treafik-ssl-certs
+      containers:
+        - name: traefik
+          args:
+            - --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
+            - --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
+            - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
+            - --entrypoints.websecure.http.tls.certresolver=cloudflare
+            - --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
+            - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
+            - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
+            - --certificatesresolvers.cloudflare.acme.caServer=
+          volumeMounts:
+          - name: ssl-certs
+            mountPath: /certs
+      initContainers:
+        - name: volume-permissions 
+          image: busybox:1.31.1 
+          command: ["sh", "-c", "chmod -Rv 600 /certs/*"] 
+          volumeMounts: 
+            - name: ssl-certs 
+              mountPath: /certs
