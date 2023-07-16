@@ -10,12 +10,12 @@
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --certificatesresolvers.letsencrypt.acme.storage=/certs/acme.json
-- op: add
-  path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.web.http.redirections.entrypoint.to=websecure
-- op: add
-  path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.web.http.redirections.entrypoint.scheme=https
+# - op: add
+#   path: /spec/template/spec/containers/0/args/-
+#   value: --entrypoints.web.http.redirections.entrypoint.to=websecure
+# - op: add
+#   path: /spec/template/spec/containers/0/args/-
+#   value: --entrypoints.web.http.redirections.entrypoint.scheme=https
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.websecure.http.tls=true
