@@ -50,7 +50,7 @@ spec:
       serviceAccountName: external-dns
       containers:
       - name: external-dns
-        image: registry.k8s.io/external-dns/external-dns:v0.13.5
+        image: registry.k8s.io/external-dns/external-dns:v0.13.2
         env:
         - name: EXTERNAL_DNS_PIHOLE_PASSWORD
           valueFrom:
@@ -60,6 +60,7 @@ spec:
         args:
         - --source=service
         - --source=ingress
+        - --source=node
         - --registry=noop
         - --policy=upsert-only
         - --provider=pihole
