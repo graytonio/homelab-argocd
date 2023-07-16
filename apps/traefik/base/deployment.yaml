@@ -20,7 +20,6 @@ spec:
             - --api.insecure
             - --entrypoints.web.Address=:80
             - --providers.kubernetesingress
-            - --providers.kubernetesIngress.publishedService.enabled=true
             - --providers.kubernetesingress.ingressEndpoint.publishedService=traefik/traefik-service
             - --providers.kubernetescrd
           ports:
