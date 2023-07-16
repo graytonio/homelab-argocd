@@ -5,7 +5,7 @@ metadata:
 spec:
   template:
     spec:
-      contaienrs:
+      containers:
         - name: traefik
           args:
             - --log.level={{ traefik_log_level }}
