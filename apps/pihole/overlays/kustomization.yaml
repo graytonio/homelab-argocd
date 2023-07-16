@@ -6,3 +6,6 @@ resources:
 {% if traefik_ssl_enabled %}
 - dashboard-ingress.yaml
 {% endif %}
+{% if auto_dns_enabled %}
+- external-dns.yaml
+{% endif %}

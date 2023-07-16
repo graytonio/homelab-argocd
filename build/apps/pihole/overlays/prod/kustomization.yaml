@@ -4,3 +4,4 @@ resources:
 - ../../base
 - pihole-admin-password.yaml
 - dashboard-ingress.yaml
+- external-dns.yaml
