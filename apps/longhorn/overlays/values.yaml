@@ -1,3 +1,5 @@
+ingress:
+  host: longhorn.graytonward.com
 {% if longhorn_backups_enabled %}
 defaultSettings: 
   backupTarget: {{ longhorn_backups }}
