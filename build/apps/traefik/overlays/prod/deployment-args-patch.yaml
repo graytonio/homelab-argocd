@@ -30,7 +30,4 @@
   value: --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
-- op: add
-  path: /spec/template/spec/containers/0/args/-
   value: --log.level=DEBUG
