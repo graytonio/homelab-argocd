@@ -1,0 +1,5 @@
+{% if longhorn_backups_enabled %}
+defaultSettings: 
+  backupTarget: {{ longhorn_backups }}
+  backupTargetCredentialSecret: b2-credentials
+{% endif %}

@@ -22,7 +22,60 @@ spec:
   sourceRepos:
   - '*'
 status: {}
-
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  creationTimestamp: null
+  name: prod-helm
+  namespace: argocd
+spec:
+  goTemplate: true
+  generators:
+  - git:
+      files:
+      - path: build/apps/**/prod/helm_config.json
+      repoURL: https://github.com/graytonio/homelab-argocd.git
+      requeueAfterSeconds: 20
+  syncPolicy: {}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/managed-by: argocd-autopilot
+        app.kubernetes.io/name: '{{ .appName }}'
+        application-role: '{{ default "app" .appRole }}'
+      annotations:
+        argocd.argoproj.io/sync-wave: '{{ default "5" .syncWave }}'
+      name: prod-{{ .userGivenName }}
+      namespace: argocd
+    spec:
+      destination:
+        namespace: '{{ .destNamespace }}'
+        server: '{{ .destServer }}'
+      ignoreDifferences:
+      - group: argoproj.io
+        jsonPointers:
+        - /status
+        kind: Application
+      project: prod
+      source:
+        chart: '{{ .chart }}'
+        repoURL: '{{ .repo }}'
+        targetRevision: '{{ .version }}'
+        helm:
+          releaseName: '{{ .chart }}'
+          valuesFiles:
+          - '{{ .baseDir }}/values.yaml'
+          - '{{ .srcPath }}/values.yaml'
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true
+        automated:
+          allowEmpty: true
+          prune: true
+          selfHeal: true
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
