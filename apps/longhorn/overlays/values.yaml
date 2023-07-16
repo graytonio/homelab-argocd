@@ -2,6 +2,6 @@ ingress:
   host: longhorn.graytonward.com
 {% if longhorn_backups_enabled %}
 defaultSettings: 
-  backupTarget: {{ longhorn_backups }}
+  backupTarget: {{ longhorn_backups.target }}
   backupTargetCredentialSecret: b2-credentials
 {% endif %}

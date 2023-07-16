@@ -80,6 +80,9 @@ spec:
         - repoURL: '{{ .srcRepoURL }}'
           targetRevision: '{{ .srcTargetRevision }}'
           ref: 'src'
+        - repoURL: '{{ .srcRepoURL }}'
+          targetRevision: '{{ .srcTargetRevision }}'
+          path: '{{ .srcPath }}/prod'
       syncPolicy:
         syncOptions:
         - CreateNamespace=true

@@ -19,7 +19,7 @@ spec:
             - --certificatesresolvers.cloudflare.acme.email=g-buddy@comcast.net
             - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
             - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
-            - --certificatesresolvers.cloudflare.acme.caServer=
+            - --certificatesresolvers.cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
           volumeMounts:
           - name: ssl-certs
             mountPath: /certs
