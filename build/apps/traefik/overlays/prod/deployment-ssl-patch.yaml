@@ -20,6 +20,8 @@ spec:
               secretKeyRef:
                 key: apiKey
                 name: cloudflare-api-credentials
+      containers:
+        - name: traefik
           volumeMounts:
           - name: ssl-certs
             mountPath: /certs
