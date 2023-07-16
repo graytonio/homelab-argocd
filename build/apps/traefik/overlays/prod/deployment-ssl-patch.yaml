@@ -20,6 +20,17 @@ spec:
             - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
             - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
             - --certificatesresolvers.cloudflare.acme.caServer=https://acme-staging-v02.api.letsencrypt.org/directory
+          env:
+          - name: CF_API_EMAIL
+            valueFrom:
+              secretKeyRef:
+                key: email
+                name: cloudflare-api-credentials
+          - name: CF_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: apiKey
+                name: cloudflare-api-credentials
           volumeMounts:
           - name: ssl-certs
             mountPath: /certs

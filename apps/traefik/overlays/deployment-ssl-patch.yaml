@@ -20,6 +20,17 @@ spec:
             - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers={{ traefik_ssl.resolver }}
             - --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
             - --certificatesresolvers.cloudflare.acme.caServer={{ traefik_ssl.ca_server }}
+          env:
+          - name: CF_API_EMAIL
+            valueFrom:
+              secretKeyRef:
+                key: email
+                name: cloudflare-api-credentials
+          - name: CF_API_KEY
+            valueFrom:
+              secretKeyRef:
+                key: apiKey
+                name: cloudflare-api-credentials
           volumeMounts:
           - name: ssl-certs
             mountPath: /certs
