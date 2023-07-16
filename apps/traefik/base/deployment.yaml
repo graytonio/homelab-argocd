@@ -45,6 +45,7 @@ metadata:
   name: traefik-service
 spec:
   type: LoadBalancer
+  loadBalancerIP: 10.0.0.95
   ports:
     - name: web
       targetPort: 80
