@@ -1,13 +1,18 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: longhorn-dashboard
+  labels:
+    name: longhorn-dashboard
 spec:
-  entryPoints:
-    - websecure
-  routes:
-    - match: Host(`longhorn.graytonward.com`) && PathPrefix(`/`)
-      kind: Rule
-      services:
-        - name: longhorn-frontend
-          port: 80
+  rules:
+  - host: longhorn.graytonward.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: longhorn-frontend
+            port: 
+              number: 80
