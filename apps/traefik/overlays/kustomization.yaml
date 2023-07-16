@@ -8,6 +8,9 @@ resources:
 - ssl-cert-pvc.yaml
 - sealed-cloudflare-credentials.yaml
 {% endif %}
+{% if traefik_log_level_enabled %}
+- deployment-log-level.yaml
+{% endif %}
 patches:
 {% if traefik_ssl_enabled %}
 - path: deployment-ssl-patch.yaml

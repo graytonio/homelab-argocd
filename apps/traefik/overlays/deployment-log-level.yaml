@@ -1,0 +1,11 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: treafik-deployment
+spec:
+  template:
+    spec:
+      contaienrs:
+        - name: traefik
+          args:
+            - --log.level={{ traefik_log_level }}

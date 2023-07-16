@@ -6,6 +6,7 @@ resources:
 - dashboard-ingress.yaml
 - ssl-cert-pvc.yaml
 - sealed-cloudflare-credentials.yaml
+- deployment-log-level.yaml
 patches:
 - path: deployment-ssl-patch.yaml
   target:
