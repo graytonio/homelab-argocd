@@ -9,6 +9,8 @@ spec:
         - name: ssl-certs
           persistentVolumeClaim:
             claimName: traefik-ssl-certs
+      containers:
+        - name: traefik
           env:
           - name: CLOUDFLARE_EMAIL
             valueFrom:
@@ -20,8 +22,6 @@ spec:
               secretKeyRef:
                 key: apiKey
                 name: cloudflare-api-credentials
-      containers:
-        - name: traefik
           volumeMounts:
           - name: ssl-certs
             mountPath: /certs
