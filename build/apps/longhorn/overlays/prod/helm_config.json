@@ -1,0 +1,17 @@
+{
+    "appName": "longhorn",
+    "userGivenName": "longhorn",
+    "destNamespace": "longhorn-system",
+    "chart": "longhorn",
+    "repo": "https://charts.longhorn.io",
+    "version": "1.4.3",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "build/apps/longhorn/overlays",
+    "basePath": "build/apps/longhorn/base",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "syncWave": "-2",
+    "appRole": "infra",
+    "labels": null,
+    "annotations": null
+  }
