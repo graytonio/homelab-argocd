@@ -7,6 +7,9 @@ resources:
 - ssl-cert-pvc.yaml
 patches:
 - path: deployment-ssl-init-container.yaml
+  target:
+    kind: Deployment
+    name: treafik-deployment
 - path: deployment-patch.yaml
   target:
     kind: Deployment
