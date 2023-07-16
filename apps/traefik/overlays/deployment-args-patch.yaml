@@ -13,7 +13,7 @@
   value: --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.web.http.redirections.entrypoint.to=websecure
+  value: --entrypoints.web.http.redirections.entrypoint.to=443
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.web.http.redirections.entrypoint.scheme=https
