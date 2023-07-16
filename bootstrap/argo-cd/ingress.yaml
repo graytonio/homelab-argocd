@@ -12,6 +12,6 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 8080
+              number: 443
         path: /
         pathType: ImplementationSpecific
