@@ -82,7 +82,7 @@ spec:
           ref: 'src'
         - repoURL: '{{ .srcRepoURL }}'
           targetRevision: '{{ .srcTargetRevision }}'
-          path: '{{ .srcPath }}/prod'
+          path: '{{if .additionalResources}} {{ .srcPath }}/prod {{end}}'
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
