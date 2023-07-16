@@ -68,15 +68,18 @@ spec:
         - /status
         kind: Application
       project: prod
-      source:
-        chart: '{{ .chart }}'
-        repoURL: '{{ .repo }}'
-        targetRevision: '{{ .version }}'
-        helm:
-          releaseName: '{{ .chart }}'
-          valuesFiles:
-          - '{{ .baseDir }}/values.yaml'
-          - '{{ .srcPath }}/values.yaml'
+      sources:
+        - chart: '{{ .chart }}'
+          repoURL: '{{ .repo }}'
+          targetRevision: '{{ .version }}'
+          helm:
+            releaseName: '{{ .chart }}'
+            valuesFiles:
+            - '$src/{{ .baseDir }}/values.yaml'
+            - '$src/{{ .srcPath }}/values.yaml'
+        - repoURL: '{{ .srcRepoURL }}'
+          targetRevision: '{{ .srcTargetRevision }}'
+          ref: 'src'
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
