@@ -39,6 +39,14 @@ spec:
       - path: build/apps/**/prod/helm_config.json
       repoURL: https://github.com/graytonio/homelab-argocd.git
       requeueAfterSeconds: 20
+      revision: ""
+      template:
+        metadata: {}
+        spec:
+          destination: {}
+          project: ""
+          source:
+            repoURL: ""
   syncPolicy: {}
   template:
     metadata:
