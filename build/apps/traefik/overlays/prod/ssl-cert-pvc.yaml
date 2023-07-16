@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: treafik-ssl-certs
+  name: traefik-ssl-certs
 spec:
   accessModes: [ "ReadWriteMany" ]
   resources:
