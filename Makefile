@@ -1,4 +1,5 @@
 export GIT_REPO := https://github.com/graytonio/homelab-argocd.git
+CURRENT_DATE = $(shell date +%FT%T%Z)
 
 APPS := $(shell find apps -maxdepth 1 -mindepth 1 -type d)
 APPS := $(APPS:apps/%=%)
@@ -23,7 +24,9 @@ bootstrap:
 
 .PHONY: set-password
 set-password:
-	kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password": "$2a$10$DRcJPH0FlO9lyjRCPeb7OOn99NRyHk99mQqVbu.sqmneogTI1DHmG","admin.passwordMtime": "'$(date +%FT%T%Z)'"}}'
+	kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password": "$(shell argocd account bcrypt --password $(PASSWORD))","admin.passwordMtime": "'$(shell date +%FT%T%Z)'"}}'
+	kubectl -n argocd rollout restart deployment/argocd-server
+	kubectl -n argocd rollout status deployment/argocd-server
 
 .PHONY: dev-cluster-up
 dev-cluster-up:
