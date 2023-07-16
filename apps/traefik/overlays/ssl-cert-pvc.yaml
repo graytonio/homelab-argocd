@@ -1,0 +1,9 @@
+Kind: PersistentVolumeClaim
+Apiversion: v1
+Metadata:
+  name: traeifk-ssl-certs
+spec:
+  accessModes: [ "ReadWriteMany" ]
+  resources:
+   requests:
+     storage: 128Mi

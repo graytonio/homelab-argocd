@@ -3,7 +3,10 @@ kind: Kustomization
 namespace: traefik
 resources:
 - ../../base
+- dashboard-ingress.yaml
+- ssl-cert-pvc.yaml
 patches:
+- deployment-ssl-init-container.yaml
 - path: deployment-patch.yaml
   target:
     kind: Deployment

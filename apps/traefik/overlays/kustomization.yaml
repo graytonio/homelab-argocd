@@ -3,11 +3,13 @@ kind: Kustomization
 namespace: traefik
 resources:
 - ../../base
-{% if traefil_ssl_enabled %}
+{% if traefik_ssl_enabled %}
 - dashboard-ingress.yaml
+- ssl-cert-pvc.yaml
 {% endif %}
 patches:
 {% if traefik_ssl_enabled %}
+- deployment-ssl-init-container.yaml
 - path: deployment-patch.yaml
   target:
     kind: Deployment
