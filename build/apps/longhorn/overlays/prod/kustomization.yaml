@@ -4,7 +4,7 @@ namespace: kube-system
 helmCharts:
   - name: longhorn
     releaseName: longhorn
-    version: 1.4.3
+    version: 1.4.1
     repo: https://charts.longhorn.io
     valuesInline:
       ingress:
