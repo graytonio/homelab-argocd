@@ -5,3 +5,6 @@ resources:
 {% if longhorn_backups_enabled %}
 - sealed-b2-credentials.yaml
 {% endif %}
+{% if traefik_ssl_enabled %}
+- dashboard-ingress.yaml
+{% endif %}

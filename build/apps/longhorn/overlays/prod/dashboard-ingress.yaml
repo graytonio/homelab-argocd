@@ -1,14 +1,13 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: argocd-ui
-  namespace: argocd
+  name: longhorn-dashboard
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`argocd.graytonward.com`) && PathPrefix(`/`)
+    - match: Host(`longhorn.graytonward.com`) && PathPrefix(`/`)
       kind: Rule
       services:
-        - name: argocd-server
+        - name: longhorn-frontend
           port: 80

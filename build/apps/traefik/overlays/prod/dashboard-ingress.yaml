@@ -4,7 +4,7 @@ metadata:
   name: traefik-dashboard
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`traefik.graytonward.com`) && PathPrefix(`/`)
       kind: Rule

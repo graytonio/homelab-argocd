@@ -1,4 +1,2 @@
-ingress:
-  enabled: true
 persistence:
   defaultClass: true
