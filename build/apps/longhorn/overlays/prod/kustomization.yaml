@@ -7,7 +7,7 @@ patches:
       name: longhorn-pre-upgrade
     patch: |
       - op: remove
-        path: /metadata/annotations/helm.sh/hook
+        path: /metadata/annotations/helm.sh~1hook
 helmCharts:
   - name: longhorn
     releaseName: longhorn
