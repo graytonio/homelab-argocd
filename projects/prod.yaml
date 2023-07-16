@@ -75,7 +75,7 @@ spec:
           helm:
             releaseName: '{{ .chart }}'
             valuesFiles:
-            - '$src/{{ .baseDir }}/values.yaml'
+            - '$src/{{ .basePath }}/values.yaml'
             - '$src/{{ .srcPath }}/values.yaml'
         - repoURL: '{{ .srcRepoURL }}'
           targetRevision: '{{ .srcTargetRevision }}'
