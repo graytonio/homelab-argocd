@@ -1,0 +1,17 @@
+{
+    "appName": "sealed-secrets",
+    "userGivenName": "sealed-secrets",
+    "destNamespace": "kube-system",
+    "chart": "sealed-secrets",
+    "repo": "https://bitnami-labs.github.io/sealed-secrets",
+    "version": "2.10.0",
+    "destServer": "https://kubernetes.default.svc",
+    "basePath": "build/apps/sealed-secrets/base",
+    "srcPath": "build/apps/sealed-secrets/overlays",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "syncWave": "-2",
+    "appRole": "infra",
+    "labels": null,
+    "annotations": null
+  }
