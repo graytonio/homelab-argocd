@@ -21,6 +21,10 @@ $(APPS):
 bootstrap:
 	argocd-autopilot repo bootstrap --recover --app "${GIT_REPO}/bootstrap/argo-cd"
 
+.PHONY: set-password
+set-password:
+	kubectl -n argocd patch secret argocd-secret -p '{"stringData": {"admin.password": "$2a$10$DRcJPH0FlO9lyjRCPeb7OOn99NRyHk99mQqVbu.sqmneogTI1DHmG","admin.passwordMtime": "'$(date +%FT%T%Z)'"}}'
+
 .PHONY: dev-cluster-up
 dev-cluster-up:
 	kind create cluster --name hl-test --config dev-kind-config.yaml
