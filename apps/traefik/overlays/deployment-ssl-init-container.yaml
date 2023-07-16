@@ -19,5 +19,5 @@ spec:
           image: busybox:1.31.1 
           command: ["sh", "-c", "chmod -Rv 600 /certs/*"] 
           volumeMounts: 
-            - name: certs 
+            - name: ssl-certs 
               mountPath: /certs
