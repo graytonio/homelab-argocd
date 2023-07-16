@@ -1,5 +1,5 @@
 kind: PersistentVolumeClaim
-apiversion: v1
+apiVersion: v1
 metadata:
   name: traeifk-ssl-certs
 spec:
