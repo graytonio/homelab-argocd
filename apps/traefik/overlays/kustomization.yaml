@@ -9,7 +9,7 @@ resources:
 {% endif %}
 patches:
 {% if traefik_ssl_enabled %}
-- deployment-ssl-init-container.yaml
+- path: deployment-ssl-init-container.yaml
 - path: deployment-patch.yaml
   target:
     kind: Deployment

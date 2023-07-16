@@ -6,7 +6,7 @@ resources:
 - dashboard-ingress.yaml
 - ssl-cert-pvc.yaml
 patches:
-- deployment-ssl-init-container.yaml
+- path: deployment-ssl-init-container.yaml
 - path: deployment-patch.yaml
   target:
     kind: Deployment
