@@ -12,7 +12,6 @@ metadata:
   name: pihole-dashboard
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    # traefik.ingress.kubernetes.io/router.middlewares: pihole-add-admin@kubernetescrd
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: PiHole DNS
     gethomepage.dev/group: Operations
@@ -20,6 +19,7 @@ metadata:
     gethomepage.dev/name: PiHole
     gethomepage.dev/widget.type: pihole
     gethomepage.dev/widget.url: http://pihole-dashboard.pihole.svc
+    gethomepage.dev/widget.key: cd90893917e9a9c8bdf3e6d5a668b14ed994d9082684b7e24c6734977a19df69
   labels:
     app.kubernetes.io/name: pihole
 spec:
