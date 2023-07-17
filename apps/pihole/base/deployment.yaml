@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: pihole
+        app.kubernetes.io/name: pihole
     spec:
       containers:
       - name: pihole
