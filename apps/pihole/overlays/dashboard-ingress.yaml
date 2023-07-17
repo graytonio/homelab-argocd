@@ -17,7 +17,6 @@ metadata:
     gethomepage.dev/description: PiHole DNS
     gethomepage.dev/group: Operations
     gethomepage.dev/icon: pi-hole.png
-    gethomepage.dev/pod-selector: 'app.kubernetes.io/name: pihole'
     gethomepage.dev/name: PiHole
     gethomepage.dev/widget.type: pihole
     gethomepage.dev/widget.url: http://pihole-dashboard.pihole.svc
