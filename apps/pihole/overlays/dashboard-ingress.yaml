@@ -18,6 +18,8 @@ metadata:
     gethomepage.dev/group: Operations
     gethomepage.dev/icon: pi-hole.png
     gethomepage.dev/name: PiHole
+  labels:
+    app.kubernetes.io/name: pihole
 spec:
   rules:
   - host: dns.{{ traefik_ssl.base_domain }}
