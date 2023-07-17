@@ -19,7 +19,7 @@ metadata:
     gethomepage.dev/icon: pi-hole.png
     gethomepage.dev/name: PiHole
   labels:
-    name: pihole-dashboard
+    app.kubernetes.io/name: pihole-dashboard
 spec:
   rules:
   - host: dns.{{ traefik_ssl.base_domain }}

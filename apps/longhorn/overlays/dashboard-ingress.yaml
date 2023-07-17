@@ -10,7 +10,7 @@ metadata:
     gethomepage.dev/icon: longhorn.png
     gethomepage.dev/name: Longhorn
   labels:
-    name: longhorn-dashboard
+    app.kubernetes.io/name: longhorn-dashboard
 spec:
   rules:
   - host: longhorn.{{ traefik_ssl.base_domain }}

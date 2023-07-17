@@ -10,7 +10,7 @@ metadata:
     gethomepage.dev/icon: traefik.png
     gethomepage.dev/name: Traefik
   labels:
-    name: traefik-dashboard
+    app.kubernetes.io/name: traefik-dashboard
 spec:
   rules:
   - host: traefik.{{ traefik_ssl.base_domain }}
