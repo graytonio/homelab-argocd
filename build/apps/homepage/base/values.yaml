@@ -6,7 +6,7 @@ config:
   services:
   - Operations:
     - PiHole:
-        app: pihole-dashboard
+        app: pihole
         namespace: pihole
         widget:
           type: pihole
