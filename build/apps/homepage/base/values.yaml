@@ -1,9 +1,6 @@
 enableRbac: true
 serviceAccount:
   create: true
-ingress:
-  main:
-    enabled: true
 config:
   widgets:
     - resources:
