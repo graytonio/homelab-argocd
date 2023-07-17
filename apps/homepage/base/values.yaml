@@ -2,6 +2,8 @@ enableRbac: true
 serviceAccount:
   create: true
 config:
+  bookmarks:
+  services:
   widgets:
     - resources:
         backend: kubernetes

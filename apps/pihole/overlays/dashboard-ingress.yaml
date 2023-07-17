@@ -4,6 +4,11 @@ metadata:
   name: pihole-dashboard
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: PiHole DNS
+    gethomepage.dev/group: Operations
+    gethomepage.dev/icon: pihole.png
+    gethomepage.dev/name: PiHole
   labels:
     name: pihole-dashboard
 spec:
