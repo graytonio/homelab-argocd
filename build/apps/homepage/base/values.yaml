@@ -1,0 +1,24 @@
+enableRbac: true
+serviceAccount:
+  create: true
+ingress:
+  main:
+    enabled: true
+config:
+  widgets:
+    - resources:
+        backend: kubernetes
+        expanded: true
+        cpu: true
+        memory: true
+    - longhorn:
+        expanded: true
+        total: true
+        labels: true
+        nodes: true
+  kubernetes:
+    mode: cluster
+  settings:
+    providers:
+      longhorn:
+        url: http://longhorn-frontend.longhorn-system.svc

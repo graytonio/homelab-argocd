@@ -1,0 +1,16 @@
+{
+    "appName": "homepage",
+    "userGivenName": "homepage",
+    "destNamespace": "homepage",
+    "chart": "homepage",
+    "repo": "https://jameswynn.github.io/helm-charts",
+    "version": "1.2.0",
+    "additionalResources": true,
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "build/apps/homepage/overlays",
+    "basePath": "build/apps/homepage/base",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "labels": null,
+    "annotations": null
+  }

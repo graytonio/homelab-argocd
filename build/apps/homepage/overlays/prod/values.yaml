@@ -1,0 +1,10 @@
+ingress:
+  main:
+    enabled: true
+    hosts:
+      - host: portal.graytonward.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    annotations:
+      traefik.ingress.kubernetes.io/router.entrypoints: websecure
