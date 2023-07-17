@@ -4,13 +4,6 @@ serviceAccount:
 config:
   bookmarks:
   services:
-  - Operations:
-    - PiHole:
-        app: pihole
-        namespace: pihole
-        widget:
-          type: pihole
-          url: http://pihole-dashboard.pihole.svc
   widgets:
     - kubernetes:
         cluster:
