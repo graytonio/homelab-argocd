@@ -10,12 +10,6 @@ config:
           show: true
           cpu: true
           memory: true
-    - PiHole:
-      icon: pi-hole.png
-      description: PiHole 
-      widget:
-        type: pihole
-        url: http://pihole-dashboard.pihole.svc
     - longhorn:
         expanded: true
         total: true
