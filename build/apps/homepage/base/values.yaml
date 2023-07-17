@@ -5,11 +5,14 @@ config:
   bookmarks:
   services:
   widgets:
-    - resources:
-        backend: kubernetes
-        expanded: true
-        cpu: true
-        memory: true
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+    - widget:
+        type: pihole
+        url: http://pihole-dashboard.pihole.svc
     - longhorn:
         expanded: true
         total: true

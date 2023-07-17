@@ -2,6 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: argocd-ui
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: ArgoCD Dashboard
+    gethomepage.dev/group: Operations
+    gethomepage.dev/icon: argocd.png
+    gethomepage.dev/name: ArgoCD
   labels:
     name: argocd-ui
 spec:
