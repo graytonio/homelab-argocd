@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: traefik
+        app.kubernetes.io/name: traefik-dashboard
     spec:
       serviceAccountName: traefik-account
       containers:
