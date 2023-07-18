@@ -12,7 +12,7 @@ addons:
         command:
           - sh
           - -c
-          - if [ $(curl ifconfig.me) != '' ]; then exit 0; else exit $?; fi
+          - if [ $(wget -q -O- https://ipinfo.io/country) == 'US' ]; then exit 0; else exit $?; fi
       initialDelaySeconds: 30
       periodSeconds: 60
       failureThreshold: 1
