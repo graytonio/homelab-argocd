@@ -12,6 +12,9 @@ transmission:
 
 nzbget:
   enabled: true
+  env:
+    NZBGET_USER: "nzbget"
+    NZBGET_PASS: "tegbzn6789"
 
 overseerr:
   enabled: true
