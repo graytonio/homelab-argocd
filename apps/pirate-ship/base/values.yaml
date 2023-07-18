@@ -1,0 +1,17 @@
+radarr:
+  enabled: true
+
+sonarr:
+  enabled: true
+
+prowlarr:
+  enabled: true
+
+transmission:
+  enabled: true
+
+nzbget:
+  enabled: true
+
+overseerr:
+  enabled: true

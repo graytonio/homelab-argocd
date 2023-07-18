@@ -1,0 +1,15 @@
+{
+  "appName": "pirate-ship",
+  "userGivenName": "pirate-ship",
+  "destNamespace": "pirate-ship",
+  "chart": "pirate-ship",
+  "repo": "https://graytonward.com/homelab-helm-charts/",
+  "version": "0.0.4",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "build/apps/pirate-ship/overlays",
+  "basePath": "build/apps/pirate-ship/base",
+  "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
