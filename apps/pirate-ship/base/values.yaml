@@ -1,17 +1,36 @@
 radarr:
   enabled: true
+  controller:
+    strategy: Recreate
   image:
     tag: 4.5.2
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
 
 sonarr:
   enabled: true
+  controller:
+    strategy: Recreate
   image:
     tag: 3.0.10
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
 
 prowlarr:
   enabled: true
   image:
     tag: 1.5.2
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
   addons:
     vpn:
       enabled: true
@@ -37,6 +56,11 @@ transmission:
   enabled: true
   image:
     tag: 4.0.3
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
   addons:
     vpn:
       enabled: true
@@ -62,6 +86,11 @@ nzbget:
   enabled: true
   image:
     tag: 21.1.20230119
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
@@ -90,3 +119,8 @@ overseerr:
   enabled: true
   image:
     tag: 1.33.0
+  persistence:
+    config:
+      enabled: true
+      size: 10Gi
+      accessMode: ReadWriteMany
