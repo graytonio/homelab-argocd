@@ -1,0 +1,17 @@
+{
+    "appName": "pod-gateway",
+    "userGivenName": "pod-gateway",
+    "destNamespace": "pod-gateway",
+    "chart": "pod-gateway",
+    "repo": "https://k8s-at-home.com/charts/",
+    "version": "5.6.2",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "build/apps/pod-gateway/overlays",
+    "basePath": "build/apps/pod-gateway/base",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "syncWave": "-2",
+    "appRole": "infra",
+    "labels": null,
+    "annotations": null
+  }
