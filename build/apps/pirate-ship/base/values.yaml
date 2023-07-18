@@ -1,20 +1,67 @@
 radarr:
   enabled: true
+  image:
+    tag: 4.5.2
+  addons:
+    vpn:
+      enabled: true
+      type: gluetun
+      gluetun:
+        image: 
+          repository: qmcgaw/gluetun
+          tag: v3.35
+      env:
+        - name: VPN_SERVICE_PROVIDER
+          value: private internet access
+        - name: OPENVPN_USER
+          valueFrom:
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-user
+        - name: OPENVPN_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-password
+        - name: VPN_INTERFACE
+          value: tun0
+      networkPolicy:
+        enabled: ture
+        egress:
+          - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+            ports:
+            - port: 443
+              protocol: UDP
+          - to:
+            - ipBlock:
+                cidr: 10.0.0.0/8 
 
 sonarr:
   enabled: true
+  image:
+    tag: 3.0.10
 
 prowlarr:
   enabled: true
+  image:
+    tag: 1.5.2
 
 transmission:
   enabled: true
+  image:
+    tag: 4.0.3
 
 nzbget:
   enabled: true
+  image:
+    tag: 21.1.20230119
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
 
 overseerr:
   enabled: true
+  image:
+    tag: 1.33.0

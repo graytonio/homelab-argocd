@@ -1,0 +1,6 @@
+radarr:
+  addons:
+    vpn:
+      env:
+        - name: SERVER_REGIONS
+          value: {{ pirate_ship_vpn.region }}
