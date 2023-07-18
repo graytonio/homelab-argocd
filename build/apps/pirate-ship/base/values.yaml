@@ -2,6 +2,16 @@ radarr:
   enabled: true
   image:
     tag: 4.5.2
+
+sonarr:
+  enabled: true
+  image:
+    tag: 3.0.10
+
+prowlarr:
+  enabled: true
+  image:
+    tag: 1.5.2
   addons:
     vpn:
       enabled: true
@@ -21,22 +31,32 @@ radarr:
               protocol: UDP
           - to:
             - ipBlock:
-                cidr: 10.0.0.0/8 
-
-sonarr:
-  enabled: true
-  image:
-    tag: 3.0.10
-
-prowlarr:
-  enabled: true
-  image:
-    tag: 1.5.2
+                cidr: 10.0.0.0/8
 
 transmission:
   enabled: true
   image:
     tag: 4.0.3
+  addons:
+    vpn:
+      enabled: true
+      type: gluetun
+      gluetun:
+        image: 
+          repository: qmcgaw/gluetun
+          tag: v3.35
+      networkPolicy:
+        enabled: ture
+        egress:
+          - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+            ports:
+            - port: 443
+              protocol: UDP
+          - to:
+            - ipBlock:
+                cidr: 10.0.0.0/8
 
 nzbget:
   enabled: true
@@ -45,6 +65,26 @@ nzbget:
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
+  addons:
+    vpn:
+      enabled: true
+      type: gluetun
+      gluetun:
+        image: 
+          repository: qmcgaw/gluetun
+          tag: v3.35
+      networkPolicy:
+        enabled: ture
+        egress:
+          - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+            ports:
+            - port: 443
+              protocol: UDP
+          - to:
+            - ipBlock:
+                cidr: 10.0.0.0/8
 
 overseerr:
   enabled: true

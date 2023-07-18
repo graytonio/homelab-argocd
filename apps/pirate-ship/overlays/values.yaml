@@ -1,4 +1,46 @@
-radarr:
+prowlarr:
+  addons:
+    vpn:
+      env:
+        - name: VPN_SERVICE_PROVIDER
+          value: private internet access
+        - name: OPENVPN_USER
+          valueFrom:
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-user
+        - name: OPENVPN_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-password
+        - name: VPN_INTERFACE
+          value: tun0
+        - name: SERVER_REGIONS
+          value: {{ pirate_ship_vpn.region }}
+
+transmission:
+  addons:
+    vpn:
+      env:
+        - name: VPN_SERVICE_PROVIDER
+          value: private internet access
+        - name: OPENVPN_USER
+          valueFrom:
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-user
+        - name: OPENVPN_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: openvpn-credentials
+              key: openvpn-password
+        - name: VPN_INTERFACE
+          value: tun0
+        - name: SERVER_REGIONS
+          value: {{ pirate_ship_vpn.region }}
+
+nzbget:
   addons:
     vpn:
       env:
