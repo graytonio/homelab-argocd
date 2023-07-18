@@ -10,21 +10,6 @@ radarr:
         image: 
           repository: qmcgaw/gluetun
           tag: v3.35
-      env:
-        - name: VPN_SERVICE_PROVIDER
-          value: private internet access
-        - name: OPENVPN_USER
-          valueFrom:
-            secretKeyRef:
-              name: openvpn-credentials
-              key: openvpn-user
-        - name: OPENVPN_PASSWORD
-          valueFrom: 
-            secretKeyRef:
-              name: openvpn-credentials
-              key: openvpn-password
-        - name: VPN_INTERFACE
-          value: tun0
       networkPolicy:
         enabled: ture
         egress:
