@@ -22,7 +22,7 @@ addons:
             name: openvpn-credentials
             key: openvpn-password
       - name: SERVER_REGIONS
-        value: us_atlanta
+        value: US Atlanta
       - name: VPN_INTERFACE
         value: tun0
     networkPolicy:
