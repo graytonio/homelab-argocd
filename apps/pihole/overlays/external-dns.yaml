@@ -61,6 +61,7 @@ spec:
         - --source=service
         - --source=ingress
         - --source=node
+        - --source=crd
         - --registry=noop
         - --policy=upsert-only
         - --provider=pihole

@@ -95,6 +95,7 @@ prowlarr:
           value: {{ pirate_ship_vpn.region }}
 
 transmission:
+  enabled: false
   env:
     PUID: 1001
     PGID: 568

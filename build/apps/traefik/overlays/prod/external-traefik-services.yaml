@@ -1,0 +1,12 @@
+http:
+  services:
+    vault:
+      loadBalancer:
+        servers:
+          - url: http://192.168.1.100
+  routers:
+    vault:
+      entryPoints:
+        - websecure
+      service: vault
+      rule: Host(`vault.graytonward.com`) && PathPrefix(`/`)

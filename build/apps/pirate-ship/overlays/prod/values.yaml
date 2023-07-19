@@ -92,6 +92,7 @@ prowlarr:
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
+  enabled: false
   env:
     PUID: 1001
     PGID: 568

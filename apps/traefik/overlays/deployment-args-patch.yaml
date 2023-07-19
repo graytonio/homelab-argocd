@@ -45,3 +45,12 @@
   path: /spec/template/spec/containers/0/args/-
   value: --log.level={{ traefik_log_level }}
 {% endif %}
+
+{% if auto_dns_enabled %}
+- op: add
+  path: /spec/tempalte/spec/containers/0/args/-
+  value: --providers.file.filename=/config/external-traefik-services.yaml
+- op: add
+  path: /spec/tempalte/spec/containers/0/args/-
+  value: --providers.file.watch=true
+{% endif %}

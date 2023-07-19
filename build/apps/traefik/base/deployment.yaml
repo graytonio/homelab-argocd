@@ -23,6 +23,7 @@ spec:
             - --providers.kubernetesingress
             - --providers.kubernetesingress.ingressEndpoint.publishedService=traefik/traefik-service
             - --providers.kubernetescrd
+            - --serverstransport.insecureskipverify
           ports:
             - name: web
               containerPort: 80

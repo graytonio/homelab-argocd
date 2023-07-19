@@ -15,3 +15,14 @@ patches:
   target:
     kind: Deployment
     name: traefik-deployment
+- path: deployment-file-provider-patch.yaml
+  target: 
+    kind: Deployment
+    name: traefik-deployment
+configMapGenerator:
+  - name: external-traefik-services-config
+    namespace: kube-system
+    options:
+      disableNameSuffixHash: true
+    files:
+      - external-traefik-services.yaml
