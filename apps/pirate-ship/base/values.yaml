@@ -4,6 +4,8 @@ radarr:
     strategy: Recreate
   image:
     tag: 4.5.2
+  podLabels:
+    app.kubernetes.io/name: pirate-ship-radarr
   ingress:
     main:
       annotations:
@@ -24,6 +26,8 @@ sonarr:
     strategy: Recreate
   image:
     tag: 3.0.10
+  podLabels:
+    app.kubernetes.io/name: pirate-ship-sonarr
   ingress:
     main:
       annotations:
