@@ -65,6 +65,9 @@ prowlarr:
         gethomepage.dev/icon: prowlarr.png                                                                                                         
         gethomepage.dev/name: Prowlarr
         gethomepage.dev/pod-selector: app.kubernetes.io/name=prowlarr
+        gethomepage.dev/widget.type: prowlarr
+        gethomepage.dev/widget.url: http://pirate-ship-prowlarr.pirate-ship.svc:9696
+        gethomepage.dev/widget.key: d54808d952d94bd1becd2e1cc3467026
   addons:
     vpn:
       enabled: true
