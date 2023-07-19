@@ -16,6 +16,8 @@ prowlarr:
               key: openvpn-password
         - name: VPN_INTERFACE
           value: tun0
+        - name: DNS_KEEP_NAMESERVER
+          value: on
         - name: SERVER_REGIONS
           value: {{ pirate_ship_vpn.region }}
 
