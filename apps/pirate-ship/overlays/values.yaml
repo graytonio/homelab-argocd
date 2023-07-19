@@ -43,6 +43,12 @@ transmission:
               key: openvpn-password
         - name: VPN_INTERFACE
           value: tun0
+        - name: DNS_KEEP_NAMESERVER
+          value: "on"
+        - name: DOT
+          value: "off"
+        - name: FIREWALL_OUTBOUND_SUBNETS
+          value: "10.0.0.0/8"
         - name: SERVER_REGIONS
           value: {{ pirate_ship_vpn.region }}
 
@@ -64,5 +70,11 @@ nzbget:
               key: openvpn-password
         - name: VPN_INTERFACE
           value: tun0
+        - name: DNS_KEEP_NAMESERVER
+          value: "on"
+        - name: DOT
+          value: "off"
+        - name: FIREWALL_OUTBOUND_SUBNETS
+          value: "10.0.0.0/8"
         - name: SERVER_REGIONS
           value: {{ pirate_ship_vpn.region }}
