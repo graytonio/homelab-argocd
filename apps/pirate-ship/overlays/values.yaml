@@ -1,6 +1,11 @@
 radarr:
   podSecurityContext:
     fsGroup: 568
+  env:
+    - name: PUID
+      value: 1001
+    - name: GUID
+      value: 568
   persistence:
     media:
       enabled: true
@@ -24,6 +29,11 @@ radarr:
 sonarr:
   podSecurityContext:
     fsGroup: 568
+  env:
+    - name: PUID
+      value: 1001
+    - name: GUID
+      value: 568
   persistence:
     media:
       enabled: true
@@ -80,6 +90,11 @@ prowlarr:
           value: {{ pirate_ship_vpn.region }}
 
 transmission:
+  env:
+    - name: PUID
+      value: 1001
+    - name: GUID
+      value: 568
   podSecurityContext:
     fsGroup: 568
   persistence:
@@ -130,6 +145,11 @@ transmission:
           value: {{ pirate_ship_vpn.region }}
 
 nzbget:
+  env:
+    - name: PUID
+      value: 1001
+    - name: GUID
+      value: 568
   podSecurityContext:
     fsGroup: 568
   persistence:
