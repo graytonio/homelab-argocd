@@ -17,7 +17,7 @@ prowlarr:
         - name: VPN_INTERFACE
           value: tun0
         - name: DNS_KEEP_NAMESERVER
-          value: on
+          value: "on"
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
