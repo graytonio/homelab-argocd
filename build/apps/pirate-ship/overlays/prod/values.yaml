@@ -59,6 +59,15 @@ prowlarr:
               pathType: ImplementationSpecific
   addons:
     vpn:
+      livenessProbe:
+        exec:
+          command:
+            - sh
+            - -c
+            - apk add curl && if [$(curl -s https://ipinfo.io/country) == 'US']; then exit 0; else exit $?; fi
+        initialDelaySeconds: 30
+        periodSeconds: 60
+        failureThreshold: 1
       env:
         - name: VPN_SERVICE_PROVIDER
           value: private internet access
@@ -109,6 +118,15 @@ transmission:
               pathType: ImplementationSpecific
   addons:
     vpn:
+      livenessProbe:
+        exec:
+          command:
+            - sh
+            - -c
+            - apk add curl && if [$(curl -s https://ipinfo.io/country) == 'CA']; then exit 0; else exit $?; fi
+        initialDelaySeconds: 30
+        periodSeconds: 60
+        failureThreshold: 1
       env:
         - name: VPN_SERVICE_PROVIDER
           value: private internet access
