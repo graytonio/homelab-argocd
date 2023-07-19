@@ -13,7 +13,7 @@ radarr:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: radarr.png                                                                                                         
         gethomepage.dev/name: Radarr
-        gethomepage.dev/podSelector: app.kubernetes.io/name=radarr
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=radarr
   persistence:
     config:
       enabled: true
