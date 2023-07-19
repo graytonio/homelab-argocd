@@ -81,7 +81,7 @@ prowlarr:
         - name: FIREWALL_OUTBOUND_SUBNETS
           value: "10.0.0.0/8"
         - name: SERVER_REGIONS
-          value: CA Ontario
+          value: US Atlanta
 transmission:
   env:
     PUID: 1001
@@ -166,7 +166,7 @@ nzbget:
           command:
             - sh
             - -c
-            - apk add curl && if [$(curl -s https://ipinfo.io/country) == 'CA']; then exit 0; else exit $?; fi
+            - apk add curl && if [$(curl -s https://ipinfo.io/country) == 'US']; then exit 0; else exit $?; fi
         initialDelaySeconds: 30
         periodSeconds: 60
         failureThreshold: 1
@@ -194,7 +194,7 @@ nzbget:
         - name: OPENVPN_CIPHERS
           value: "aes-128-cbc"
         - name: SERVER_REGIONS
-          value: CA Ontario
+          value: US Atlanta
 overseerr:
   ingress:
     main:
