@@ -3,7 +3,7 @@ http:
     vault:
       loadBalancer:
         servers:
-          - url: http://192.168.1.100
+          - url: http://10.0.0.50
   routers:
     vault:
       entryPoints:
