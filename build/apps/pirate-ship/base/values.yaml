@@ -38,7 +38,7 @@ sonarr:
         gethomepage.dev/icon: sonarr.png                                                                                                         
         gethomepage.dev/name: Sonarr
         gethomepage.dev/pod-selector: app.kubernetes.io/name=sonarr
-        gethomepage.dev/widget.type: radarr
+        gethomepage.dev/widget.type: sonarr
         gethomepage.dev/widget.url: http://pirate-ship-sonarr.pirate-ship.svc:8989
         gethomepage.dev/widget.key: 1333b9a2e3044e898c5d3654c2c60ccc
   persistence:
@@ -185,3 +185,6 @@ overseerr:
         gethomepage.dev/icon: overseerr.png                                                                                                         
         gethomepage.dev/name: Overseerr
         gethomepage.dev/pod-selector: app.kubernetes.io/name=overseerr
+        gethomepage.dev/widget.type: overseerr
+        gethomepage.dev/widget.url: http://pirate-ship-overseerr.pirate-ship.svc:5055
+        gethomepage.dev/widget.key: MTY4OTcyMjUwNjg0MDI3M2M1YzU0LTQxNDgtNGNkYS1iZTAyLTNiOWFjMjgwMTM0Yw==
