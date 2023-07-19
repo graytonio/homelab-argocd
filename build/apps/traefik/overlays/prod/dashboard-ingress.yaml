@@ -9,6 +9,8 @@ metadata:
     gethomepage.dev/group: Operations
     gethomepage.dev/icon: traefik.png
     gethomepage.dev/name: Traefik
+    gethomepage.dev/widget.type: traefik
+    gethomepage.dev/widget.url: http://traefik-service.traefik.svc:8080
   labels:
     app.kubernetes.io/name: traefik-dashboard
 spec:
