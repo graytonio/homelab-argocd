@@ -4,6 +4,14 @@ radarr:
     strategy: Recreate
   image:
     tag: 4.5.2
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: radarr.png                                                                                                         
+        gethomepage.dev/name: Radarr
   persistence:
     config:
       enabled: true
@@ -16,6 +24,14 @@ sonarr:
     strategy: Recreate
   image:
     tag: 3.0.10
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: sonarr.png                                                                                                         
+        gethomepage.dev/name: Sonarr
   persistence:
     config:
       enabled: true
@@ -31,6 +47,14 @@ prowlarr:
       enabled: true
       size: 10Gi
       accessMode: ReadWriteMany
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: prowlarr.png                                                                                                         
+        gethomepage.dev/name: Prowlarr
   addons:
     vpn:
       enabled: true
@@ -61,6 +85,14 @@ transmission:
       enabled: true
       size: 10Gi
       accessMode: ReadWriteMany
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: transmission.png                                                                                                         
+        gethomepage.dev/name: Transmission
   addons:
     vpn:
       enabled: true
@@ -91,6 +123,14 @@ nzbget:
       enabled: true
       size: 10Gi
       accessMode: ReadWriteMany
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: nzbget.png                                                                                                         
+        gethomepage.dev/name: NZBget
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
@@ -124,3 +164,11 @@ overseerr:
       enabled: true
       size: 10Gi
       accessMode: ReadWriteMany
+  ingress:
+    main:
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/group: Media
+        gethomepage.dev/icon: overseerr.png                                                                                                         
+        gethomepage.dev/name: Overseerr

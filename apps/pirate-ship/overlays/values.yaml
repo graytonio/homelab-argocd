@@ -1,4 +1,32 @@
+radarr:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: radarr.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+
+sonarr:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: sonarr.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+
 prowlarr:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: prowlarr.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -26,6 +54,14 @@ prowlarr:
           value: {{ pirate_ship_vpn.region }}
 
 transmission:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: transmission.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -53,6 +89,14 @@ transmission:
           value: {{ pirate_ship_vpn.region }}
 
 nzbget:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: nzbget.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -78,3 +122,13 @@ nzbget:
           value: "10.0.0.0/8"
         - name: SERVER_REGIONS
           value: {{ pirate_ship_vpn.region }}
+
+overseerr:
+  ingress:
+    main:
+      enabled: {{ traefik_ssl_enabled }}
+      hosts:
+        - host: netflix.{{ traefik_ssl.base_domain }}
+          paths:
+            - path: /
+              pathType: ImplementationSpecific

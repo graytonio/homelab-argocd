@@ -1,4 +1,30 @@
+radarr:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: radarr.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
+sonarr:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: sonarr.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
 prowlarr:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: prowlarr.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -25,6 +51,14 @@ prowlarr:
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: transmission.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -51,6 +85,14 @@ transmission:
         - name: SERVER_REGIONS
           value: US Atlanta
 nzbget:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: nzbget.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
   addons:
     vpn:
       env:
@@ -76,3 +118,12 @@ nzbget:
           value: "10.0.0.0/8"
         - name: SERVER_REGIONS
           value: US Atlanta
+overseerr:
+  ingress:
+    main:
+      enabled: True
+      hosts:
+        - host: netflix.graytonward.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
