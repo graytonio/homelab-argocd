@@ -18,6 +18,8 @@ prowlarr:
           value: tun0
         - name: DNS_KEEP_NAMESERVER
           value: "on"
+        - name: DOT
+          value: "off"
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
