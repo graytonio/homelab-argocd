@@ -22,6 +22,8 @@ prowlarr:
           value: "off"
         - name: FIREWALL
           value: "off"
+        - name: FIREWALL_OUTBOUND_SUBNETS
+          value: "10.0.0.0/8"
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
