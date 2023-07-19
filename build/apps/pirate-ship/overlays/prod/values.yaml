@@ -20,6 +20,8 @@ prowlarr:
           value: "on"
         - name: DOT
           value: "off"
+        - name: FIREWALL
+          value: "off"
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
