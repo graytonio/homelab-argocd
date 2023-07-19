@@ -118,6 +118,8 @@ transmission:
         gethomepage.dev/icon: transmission.png                                                                                                         
         gethomepage.dev/name: Transmission
         gethomepage.dev/pod-selector: app.kubernetes.io/name=transmission
+        gethomepage.dev/widget.type: transmission
+        gethomepage.dev/widget.url: http://pirate-ship-transmission.pirate-ship.svc:9091
   addons:
     vpn:
       enabled: true
@@ -157,6 +159,10 @@ nzbget:
         gethomepage.dev/icon: nzbget.png                                                                                                         
         gethomepage.dev/name: NZBget
         gethomepage.dev/pod-selector: app.kubernetes.io/name=nzbget
+        gethomepage.dev/widget.type: nzbget
+        gethomepage.dev/widget.url: http://pirate-ship-nzbget.pirate-ship.svc:6789
+        gethomepage.dev/widget.username: nzbget
+        gethomepage.dev/widget.password: tegbzn6789
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
