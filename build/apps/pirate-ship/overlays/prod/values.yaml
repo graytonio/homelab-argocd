@@ -3,10 +3,12 @@ radarr:
     fsGroup: 568
   persistence:
     media:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/Movies
     downloads:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/downloads
@@ -23,10 +25,12 @@ sonarr:
     fsGroup: 568
   persistence:
     media:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/Movies
     downloads:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/downloads
@@ -77,10 +81,12 @@ transmission:
     fsGroup: 568
   persistence:
     media:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/Movies
     downloads:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/downloads
@@ -122,10 +128,12 @@ nzbget:
     fsGroup: 568
   persistence:
     media:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/Movies
     downloads:
+      enabled: true
       type: nfs
       server: 10.0.0.50
       path: /mnt/Vault/Media/downloads
