@@ -4,7 +4,7 @@ radarr:
   env:
     - name: PUID
       value: 1001
-    - name: GUID
+    - name: PGID
       value: 568
   persistence:
     media:
@@ -32,7 +32,7 @@ sonarr:
   env:
     - name: PUID
       value: 1001
-    - name: GUID
+    - name: PGID
       value: 568
   persistence:
     media:
@@ -93,7 +93,7 @@ transmission:
   env:
     - name: PUID
       value: 1001
-    - name: GUID
+    - name: PGID
       value: 568
   podSecurityContext:
     fsGroup: 568
@@ -148,7 +148,7 @@ nzbget:
   env:
     - name: PUID
       value: 1001
-    - name: GUID
+    - name: PGID
       value: 568
   podSecurityContext:
     fsGroup: 568
