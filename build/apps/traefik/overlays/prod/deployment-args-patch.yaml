@@ -35,8 +35,8 @@
   path: /spec/template/spec/containers/0/args/-
   value: --log.level=DEBUG
 - op: add
-  path: /spec/tempalte/spec/containers/0/args/-
+  path: /spec/template/spec/containers/0/args/-
   value: --providers.file.filename=/config/external-traefik-services.yaml
 - op: add
-  path: /spec/tempalte/spec/containers/0/args/-
+  path: /spec/template/spec/containers/0/args/-
   value: --providers.file.watch=true
