@@ -5,7 +5,6 @@ radarr:
   image:
     tag: 4.5.2
   podLabels:
-    app.kubernetes.io/name: pirate-ship-radarr
   ingress:
     main:
       annotations:
@@ -14,6 +13,7 @@ radarr:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: radarr.png                                                                                                         
         gethomepage.dev/name: Radarr
+        gethomepage.dev/podSelector: app.kubernetes.io/name=radarr
   persistence:
     config:
       enabled: true
@@ -26,8 +26,6 @@ sonarr:
     strategy: Recreate
   image:
     tag: 3.0.10
-  podLabels:
-    app.kubernetes.io/name: pirate-ship-sonarr
   ingress:
     main:
       annotations:
