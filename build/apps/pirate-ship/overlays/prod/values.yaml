@@ -121,6 +121,8 @@ transmission:
           value: "off"
         - name: FIREWALL_OUTBOUND_SUBNETS
           value: "10.0.0.0/8"
+        - name: VPN_PORT_FORWARDING
+          value: "on"
         - name: SERVER_REGIONS
           value: US Atlanta
 nzbget:
