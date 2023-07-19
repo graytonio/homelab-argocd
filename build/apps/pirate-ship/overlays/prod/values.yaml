@@ -2,10 +2,8 @@ radarr:
   podSecurityContext:
     fsGroup: 568
   env:
-    - name: PUID
-      value: 1001
-    - name: PGID
-      value: 568
+    PUID: 1001
+    PGID: 568
   persistence:
     media:
       enabled: true
@@ -29,10 +27,8 @@ sonarr:
   podSecurityContext:
     fsGroup: 568
   env:
-    - name: PUID
-      value: 1001
-    - name: PGID
-      value: 568
+    PUID: 1001
+    PGID: 568
   persistence:
     media:
       enabled: true
@@ -88,10 +84,8 @@ prowlarr:
           value: US Atlanta
 transmission:
   env:
-    - name: PUID
-      value: 1001
-    - name: PGID
-      value: 568
+    PUID: 1001
+    PGID: 568
   podSecurityContext:
     fsGroup: 568
   persistence:
@@ -142,10 +136,8 @@ transmission:
           value: US Atlanta
 nzbget:
   env:
-    - name: PUID
-      value: 1001
-    - name: PGID
-      value: 568
+    PUID: 1001
+    PGID: 568
   podSecurityContext:
     fsGroup: 568
   persistence:
