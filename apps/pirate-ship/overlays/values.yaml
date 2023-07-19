@@ -20,8 +20,6 @@ prowlarr:
           value: "on"
         - name: DOT
           value: "off"
-        - name: DNS_SERVER
-          value: "10.43.0.10"
         - name: FIREWALL_OUTBOUND_SUBNETS
           value: "10.0.0.0/8"
         - name: SERVER_REGIONS
