@@ -1,4 +1,15 @@
 radarr:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: {{ traefik_ssl_enabled }}
@@ -9,6 +20,17 @@ radarr:
               pathType: ImplementationSpecific
 
 sonarr:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: {{ traefik_ssl_enabled }}
@@ -54,6 +76,17 @@ prowlarr:
           value: {{ pirate_ship_vpn.region }}
 
 transmission:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: {{ traefik_ssl_enabled }}
@@ -89,6 +122,17 @@ transmission:
           value: {{ pirate_ship_vpn.region }}
 
 nzbget:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: {{ traefik_ssl_enabled }}

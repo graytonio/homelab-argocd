@@ -1,4 +1,15 @@
 radarr:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: True
@@ -8,6 +19,17 @@ radarr:
             - path: /
               pathType: ImplementationSpecific
 sonarr:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: True
@@ -51,6 +73,17 @@ prowlarr:
         - name: SERVER_REGIONS
           value: US Atlanta
 transmission:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: True
@@ -85,6 +118,17 @@ transmission:
         - name: SERVER_REGIONS
           value: US Atlanta
 nzbget:
+  podSecurityContext:
+    fsGroup: 568
+  persistence:
+    media:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/Movies
+    downloads:
+      type: nfs
+      server: 10.0.0.50
+      path: /mnt/Vault/Media/downloads
   ingress:
     main:
       enabled: True
