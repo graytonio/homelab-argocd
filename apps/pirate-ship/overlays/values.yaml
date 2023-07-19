@@ -29,7 +29,7 @@ sonarr:
       enabled: true
       type: nfs
       server: 10.0.0.50
-      path: /mnt/Vault/Media/Movies
+      path: /mnt/Vault/Media/TV
     downloads:
       enabled: true
       type: nfs
