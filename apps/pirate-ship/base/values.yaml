@@ -14,6 +14,9 @@ radarr:
         gethomepage.dev/icon: radarr.png                                                                                                         
         gethomepage.dev/name: Radarr
         gethomepage.dev/pod-selector: app.kubernetes.io/name=radarr
+        gethomepage.dev/widget.type: radarr
+        gethomepage.dev/widget.url: http://pirate-ship-radarr.pirate-ship.svc:7878
+        gethomepage.dev/widget.key: ba41a262d1f448f58627ec6d8de4ad9c
   persistence:
     config:
       enabled: true
@@ -34,6 +37,10 @@ sonarr:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: sonarr.png                                                                                                         
         gethomepage.dev/name: Sonarr
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=sonarr
+        gethomepage.dev/widget.type: radarr
+        gethomepage.dev/widget.url: http://pirate-ship-sonarr.pirate-ship.svc:8989
+        gethomepage.dev/widget.key: 1333b9a2e3044e898c5d3654c2c60ccc
   persistence:
     config:
       enabled: true
@@ -57,6 +64,7 @@ prowlarr:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: prowlarr.png                                                                                                         
         gethomepage.dev/name: Prowlarr
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=prowlarr
   addons:
     vpn:
       enabled: true
@@ -95,6 +103,7 @@ transmission:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: transmission.png                                                                                                         
         gethomepage.dev/name: Transmission
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=transmission
   addons:
     vpn:
       enabled: true
@@ -133,6 +142,7 @@ nzbget:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: nzbget.png                                                                                                         
         gethomepage.dev/name: NZBget
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=nzbget
   env:
     NZBGET_USER: "nzbget"
     NZBGET_PASS: "tegbzn6789"
@@ -174,3 +184,4 @@ overseerr:
         gethomepage.dev/group: Media
         gethomepage.dev/icon: overseerr.png                                                                                                         
         gethomepage.dev/name: Overseerr
+        gethomepage.dev/pod-selector: app.kubernetes.io/name=overseerr
