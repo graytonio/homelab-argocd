@@ -162,6 +162,7 @@ nzbget:
               pathType: ImplementationSpecific
   addons:
     vpn:
+      enabled: false
       env:
         - name: VPN_SERVICE_PROVIDER
           value: private internet access
