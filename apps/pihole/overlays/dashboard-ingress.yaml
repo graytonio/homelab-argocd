@@ -11,7 +11,7 @@ metadata:
     gethomepage.dev/name: PiHole
     gethomepage.dev/href: https://dns.{{ env_base_domain }}/admin
     gethomepage.dev/widget.type: pihole
-    gethomepage.dev/widget.url: http://pihole-dashboard.pihole.svc
+    gethomepage.dev/widget.url: http://pihole.pihole.svc
     gethomepage.dev/widget.key: cd90893917e9a9c8bdf3e6d5a668b14ed994d9082684b7e24c6734977a19df69
   labels:
     app.kubernetes.io/name: pihole
