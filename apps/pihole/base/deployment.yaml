@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pihiole
+  name: pihole
   labels:
     app.kubernetes.io/name: pihole
     app.kubernetes.io/version: 2023.05.2
