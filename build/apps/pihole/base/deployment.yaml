@@ -52,7 +52,7 @@ spec:
               - google.com
               - 127.0.0.1
           initialDelaySeconds: 30
-          periodSecond: 5
+          periodSeconds: 5
       volumes:
         - name: config
           persistentVolumeClaim:
