@@ -3,7 +3,8 @@ kind: Deployment
 metadata:
   name: pihiole
   labels:
-    app.kubernetes.io/name: pihole-dashboard
+    app.kubernetes.io/name: pihole
+    app.kubernetes.io/version: 2023.05.2
 spec:
   selector:
     matchLabels:
@@ -11,8 +12,8 @@ spec:
   template:
     metadata:
       labels:
-        app: pihole
-        app.kubernetes.io/name: pihole-dashboard
+        app.kubernetes.io/name: pihole
+        app.kubernetes.io/version: 2023.05.2
     spec:
       containers:
       - name: pihole
@@ -97,10 +98,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pihole-dashboard
+  name: pihole
 spec:
   selector:
-    app: pihole
+    app.kubernetes.io/name: pihole
   ports:
   - name: dashboard
     port: 80

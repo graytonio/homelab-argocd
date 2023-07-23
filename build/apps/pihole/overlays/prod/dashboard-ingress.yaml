@@ -1,15 +1,7 @@
-apiVersion: traefik.io/v1alpha1
-kind: Middleware
-metadata:
-  name: add-admin
-spec:
-  addPrefix:
-    prefix: /admin
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pihole-dashboard
+  name: pihole
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     gethomepage.dev/enabled: "true"
@@ -17,6 +9,7 @@ metadata:
     gethomepage.dev/group: Operations
     gethomepage.dev/icon: pi-hole.png
     gethomepage.dev/name: PiHole
+    gethomepage.dev/href: https://dns.graytonward.com/admin
     gethomepage.dev/widget.type: pihole
     gethomepage.dev/widget.url: http://pihole-dashboard.pihole.svc
     gethomepage.dev/widget.key: cd90893917e9a9c8bdf3e6d5a668b14ed994d9082684b7e24c6734977a19df69
@@ -31,6 +24,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: pihole-dashboard
+            name: pihole
             port: 
               name: dashboard
