@@ -78,7 +78,7 @@ spec:
         - --registry=noop
         - --policy=upsert-only
         - --provider=pihole
-        - --pihole-server=http://pihole-dashboard.pihole.svc.cluster.local
+        - --pihole-server=http://pihole.pihole.svc.cluster.local
         resources:
           limits:
             memory: "2Gi"
