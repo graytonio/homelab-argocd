@@ -4,6 +4,9 @@ namespace: pirate-ship
 resources:
 - openvpn-credentials.yaml
 patches:
-  - path: job-deletion-policy.yaml
-    target:
+  - target:
       kind: Job
+    patch: |-
+      - op: add
+        path: "/metadata/annotations/argocd.argoproj.io/hook-delete-policy"
+        value: HookSucceeded
