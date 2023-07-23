@@ -7,6 +7,7 @@ radarr:
   podLabels:
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
@@ -30,6 +31,7 @@ sonarr:
     tag: 3.0.10
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
@@ -56,6 +58,7 @@ prowlarr:
       accessMode: ReadWriteMany
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
@@ -116,6 +119,7 @@ transmission:
         mountPath: /config
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
@@ -162,6 +166,7 @@ nzbget:
       accessMode: ReadWriteMany
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
@@ -207,6 +212,7 @@ overseerr:
       accessMode: ReadWriteMany
   ingress:
     main:
+      enabled: true
       annotations:
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
