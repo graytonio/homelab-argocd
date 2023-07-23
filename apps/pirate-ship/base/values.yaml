@@ -82,6 +82,8 @@ prowlarr:
             - sh
             - -c
             - wget -q https://ipinfo.io -O /dev/null
+        initialDelaySeconds: 30
+        periodSecond: 30
       networkPolicy:
         enabled: ture
         egress:

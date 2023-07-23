@@ -43,6 +43,15 @@ spec:
           limits:
             memory: "2Gi"
             cpu: "1"
+        livenessProbe:
+          exec:
+            command:
+              - nslookup
+              - -timeout=1
+              - google.com
+              - 127.0.0.1
+          initialDelaySeconds: 30
+          periodSecond: 5
       volumes:
         - name: config
           persistentVolumeClaim:
