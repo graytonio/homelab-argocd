@@ -11,6 +11,9 @@ permissions:
   contents: write
 jobs:
     build-infra:
+        concurrency:
+          group: ci-manifests
+          cancel-in-progress: true
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
