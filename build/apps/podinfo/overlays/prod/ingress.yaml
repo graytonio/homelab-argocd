@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: podinfo
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: Pod Info
+    gethomepage.dev/group: Applications
+    gethomepage.dev/icon: kubernetes.png
+    gethomepage.dev/name: PodInfo
+spec:
+  rules:
+  - host: podinfo.graytonward.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: podinfo
+            port: 
+              name: http
