@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: pihole
+      app.kubernetes.io/name: pihole
   template:
     metadata:
       labels:
@@ -71,7 +71,7 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 10.0.0.92
   selector:
-    app: pihole
+    app.kubernetes.io/name: pihole
   ports:
   - name: dns-tcp
     port: 53
@@ -88,7 +88,7 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 10.0.0.92
   selector:
-    app: pihole
+    app.kubernetes.io/name: pihole
   ports:
   - name: dns-udp
     port: 53
