@@ -82,7 +82,7 @@ prowlarr:
             - sh
             - -c
             - wget -q https://ipinfo.io -O /dev/null
-        initialDelaySeconds: 30
+        initialDelaySeconds: 60
         periodSeconds: 30
       networkPolicy:
         enabled: ture
