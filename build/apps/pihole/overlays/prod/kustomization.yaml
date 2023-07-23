@@ -1,6 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: pihole
+commonLabels:
+  app.kubernetes.io/component: dns
+  app.kubernetes.io/managed-by: argocd
 resources:
 - ../../base
 - pihole-admin-password.yaml

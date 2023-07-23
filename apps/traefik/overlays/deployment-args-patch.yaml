@@ -40,12 +40,6 @@
   value: --certificatesresolvers.cloudflare.acme.caServer={{ traefik_ssl_stage }}
 {% endif %}
 
-{% if traefik_log_level %}
-- op: add
-  path: /spec/template/spec/containers/0/args/-
-  value: --log.level={{ traefik_log_level }}
-{% endif %}
-
 {% if auto_dns_enabled %}
 - op: add
   path: /spec/template/spec/containers/0/args/-

@@ -17,7 +17,8 @@ radarr:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: radarr.graytonward.com
           paths:
@@ -42,7 +43,8 @@ sonarr:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: sonarr.graytonward.com
           paths:
@@ -51,7 +53,8 @@ sonarr:
 prowlarr:
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: prowlarr.graytonward.com
           paths:
@@ -102,7 +105,8 @@ transmission:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: transmission.graytonward.com
           paths:
@@ -154,7 +158,8 @@ nzbget:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: nzbget.graytonward.com
           paths:
@@ -191,7 +196,8 @@ nzbget:
 overseerr:
   ingress:
     main:
-      enabled: True
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
         - host: netflix.graytonward.com
           paths:

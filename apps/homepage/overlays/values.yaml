@@ -1,12 +1,10 @@
-{% if traefik_ssl_enabled %}
 ingress:
   main:
     enabled: true
     hosts:
-      - host: portal.{{ traefik_ssl.base_domain }}
+      - host: portal.{{ env_base_domain }}
         paths:
           - path: /
             pathType: ImplementationSpecific
     annotations:
-      traefik.ingress.kubernetes.io/router.entrypoints: websecure
-{% endif %}
+      traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"

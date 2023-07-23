@@ -3,13 +3,13 @@ kind: Ingress
 metadata:
   name: pihole
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: PiHole DNS
     gethomepage.dev/group: Operations
     gethomepage.dev/icon: pi-hole.png
     gethomepage.dev/name: PiHole
-    gethomepage.dev/href: https://dns.{{ traefik_ssl.base_domain }}/admin
+    gethomepage.dev/href: https://dns.{{ env_base_domain }}/admin
     gethomepage.dev/widget.type: pihole
     gethomepage.dev/widget.url: http://pihole-dashboard.pihole.svc
     gethomepage.dev/widget.key: cd90893917e9a9c8bdf3e6d5a668b14ed994d9082684b7e24c6734977a19df69
@@ -17,7 +17,7 @@ metadata:
     app.kubernetes.io/name: pihole
 spec:
   rules:
-  - host: dns.{{ traefik_ssl.base_domain }}
+  - host: dns.{{ env_base_domain }}
     http:
       paths:
       - pathType: Prefix

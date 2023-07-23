@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: traefik-dashboard
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Traefik Dashboard
     gethomepage.dev/group: Operations
@@ -15,7 +15,7 @@ metadata:
     app.kubernetes.io/name: traefik-dashboard
 spec:
   rules:
-  - host: traefik.{{ traefik_ssl.base_domain }}
+  - host: traefik.{{ env_base_domain }}
     http:
       paths:
       - pathType: Prefix

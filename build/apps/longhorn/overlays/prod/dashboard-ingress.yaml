@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: longhorn-dashboard
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Longhorn Dashboard
     gethomepage.dev/group: Operations

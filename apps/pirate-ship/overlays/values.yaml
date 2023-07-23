@@ -17,9 +17,10 @@ radarr:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: radarr.{{ traefik_ssl.base_domain }}
+        - host: radarr.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -43,9 +44,10 @@ sonarr:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: sonarr.{{ traefik_ssl.base_domain }}
+        - host: sonarr.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -53,9 +55,10 @@ sonarr:
 prowlarr:
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: prowlarr.{{ traefik_ssl.base_domain }}
+        - host: prowlarr.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -105,9 +108,10 @@ transmission:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: transmission.{{ traefik_ssl.base_domain }}
+        - host: transmission.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -158,9 +162,10 @@ nzbget:
       path: /mnt/Vault/Media/downloads
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: nzbget.{{ traefik_ssl.base_domain }}
+        - host: nzbget.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific
@@ -196,9 +201,10 @@ nzbget:
 overseerr:
   ingress:
     main:
-      enabled: {{ traefik_ssl_enabled }}
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
       hosts:
-        - host: netflix.{{ traefik_ssl.base_domain }}
+        - host: netflix.{{ env_base_domain }}
           paths:
             - path: /
               pathType: ImplementationSpecific

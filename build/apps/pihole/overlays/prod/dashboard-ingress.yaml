@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: pihole
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: PiHole DNS
     gethomepage.dev/group: Operations

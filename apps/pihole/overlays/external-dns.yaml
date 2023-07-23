@@ -42,16 +42,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: external-dns
+  labels:
+    app.kubernetes.io/name: external-dns
+    app.kubernetes.io/version: v0.13.2
 spec:
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: external-dns
+      app.kubernetes.io/name: external-dns
+      app.kubernetes.io/version: v0.13.2
   template:
     metadata:
       labels:
-        app: external-dns
+        app.kubernetes.io/name: external-dns
+        app.kubernetes.io/version: v0.13.2
     spec:
       serviceAccountName: external-dns
       containers:

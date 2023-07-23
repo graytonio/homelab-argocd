@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: longhorn-dashboard
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Longhorn Dashboard
     gethomepage.dev/group: Operations
@@ -14,7 +14,7 @@ metadata:
     app.kubernetes.io/name: longhorn-dashboard
 spec:
   rules:
-  - host: longhorn.{{ traefik_ssl.base_domain }}
+  - host: longhorn.{{ env_base_domain }}
     http:
       paths:
       - pathType: Prefix

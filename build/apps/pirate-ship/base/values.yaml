@@ -8,7 +8,6 @@ radarr:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: radarr.png                                                                                                         
@@ -32,7 +31,6 @@ sonarr:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: sonarr.png                                                                                                         
@@ -59,7 +57,6 @@ prowlarr:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: prowlarr.png                                                                                                         
@@ -120,7 +117,6 @@ transmission:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: transmission.png                                                                                                         
@@ -167,7 +163,6 @@ nzbget:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: nzbget.png                                                                                                         
@@ -213,7 +208,6 @@ overseerr:
   ingress:
     main:
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
         gethomepage.dev/enabled: "true"
         gethomepage.dev/group: Media
         gethomepage.dev/icon: overseerr.png                                                                                                         
