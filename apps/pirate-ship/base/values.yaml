@@ -81,7 +81,7 @@ prowlarr:
           command:
             - sh
             - -c
-            - apk add curl && curl -s https://ipinfo.io
+            - wget -q https://ipinfo.io -O /dev/null
       networkPolicy:
         enabled: ture
         egress:
