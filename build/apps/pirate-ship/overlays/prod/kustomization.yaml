@@ -3,3 +3,7 @@ kind: Kustomization
 namespace: pirate-ship
 resources:
 - openvpn-credentials.yaml
+patches:
+  - path: job-deletion-policy.yaml
+    target:
+      kind: Job
