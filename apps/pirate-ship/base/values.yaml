@@ -76,6 +76,12 @@ prowlarr:
         image: 
           repository: qmcgaw/gluetun
           tag: v3.35
+      livenessProbe:
+        exec:
+          command:
+            - sh
+            - -c
+            - curl -s https://ipinfo.io
       networkPolicy:
         enabled: ture
         egress:
