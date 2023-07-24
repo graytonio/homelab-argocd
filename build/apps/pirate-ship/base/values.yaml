@@ -51,9 +51,6 @@ prowlarr:
   enabled: true
   image:
     tag: 1.5.2
-  controller:
-    # restartPolicy: Never
-    replicas: 3
   persistence:
     config:
       enabled: true
