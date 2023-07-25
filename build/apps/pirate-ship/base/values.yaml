@@ -70,7 +70,7 @@ prowlarr:
         gethomepage.dev/widget.key: d54808d952d94bd1becd2e1cc3467026
   addons:
     vpn:
-      enabled: true
+      enabled: false
       type: gluetun
       gluetun:
         image: 
