@@ -1,5 +1,2 @@
 ingress:
   host: longhorn.graytonward.com
-defaultSettings: 
-  backupTarget: s3://vault-k3s-longhorn-backups@us-west-004/
-  backupTargetCredentialSecret: b2-credentials

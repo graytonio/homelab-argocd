@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: longhorn-system
 resources:
 - dashboard-ingress.yaml
-- sealed-b2-credentials.yaml
