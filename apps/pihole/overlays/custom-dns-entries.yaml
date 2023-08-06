@@ -1,11 +1,14 @@
+{% for service in external_services.services %}
+---
 apiVersion: externaldns.k8s.io/v1alpha1
 kind: DNSEndpoint
 metadata:
-  name: vault-dns
+  name: {{service.cname}}-dns
 spec:
   endpoints:
-  - dnsName: vault.graytonward.com
+  - dnsName: {{service.cname}}.{{env_base_domain}}
     recordTTL: 180
     recordType: A
     targets:
     - 10.0.0.91
+{% endfor %}

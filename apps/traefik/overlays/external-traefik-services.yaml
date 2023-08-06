@@ -1,12 +1,16 @@
 http:
   services:
-    vault:
+{% for service in external_services.services %}
+    {{service.cname}}:
       loadBalancer:
         servers:
-          - url: http://10.0.0.50
+          - url: {{service.service_address}}
+{% endfor %}
   routers:
-    vault:
+{% for service in external_services.services %}
+    {{service.cname}}:
       entryPoints:
         - websecure
-      service: vault
-      rule: Host(`vault.graytonward.com`) && PathPrefix(`/`)
+      service: {{service.cname}}
+      rule: Host(`{{service.cname}}.{{env_base_domain}}`) && PathPrefix(`/`)
+{% endfor %}

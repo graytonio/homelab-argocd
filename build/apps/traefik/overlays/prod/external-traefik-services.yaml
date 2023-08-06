@@ -4,9 +4,18 @@ http:
       loadBalancer:
         servers:
           - url: http://10.0.0.50
+    home:
+      loadBalancer:
+        servers:
+          - url: http://192.168.20.10:8123
   routers:
     vault:
       entryPoints:
         - websecure
       service: vault
       rule: Host(`vault.graytonward.com`) && PathPrefix(`/`)
+    home:
+      entryPoints:
+        - websecure
+      service: home
+      rule: Host(`home.graytonward.com`) && PathPrefix(`/`)
