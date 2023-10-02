@@ -9,6 +9,7 @@ metadata:
     gethomepage.dev/group: Streaming
     gethomepage.dev/icon: twitch.png
     gethomepage.dev/name: Restramer
+    gethomepage.dev/href: https://stream.graytonward.com/ui
   labels:
     app.kubernetes.io/name: restreamer
 spec:
