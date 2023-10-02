@@ -7,7 +7,7 @@ metadata:
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Restreamer
     gethomepage.dev/group: Operations
-    gethomepage.dev/icon: pi-hole.png
+    gethomepage.dev/icon: twitch.png
     gethomepage.dev/name: Restramer
   labels:
     app.kubernetes.io/name: restreamer
