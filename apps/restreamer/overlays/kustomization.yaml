@@ -10,7 +10,7 @@ resources:
 - config-persistence-pvc.yaml
 
 patches:
-  - patch: config-persistence-patch.yaml
+  - path: config-persistence-patch.yaml
     target:
       kind: Deployment
       name: restreamer
