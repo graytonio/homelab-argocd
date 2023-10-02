@@ -1,0 +1,12 @@
+{
+    "appName": "restreamer",
+    "userGivenName": "restreamer",
+    "destNamespace": "restreamer",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "build/apps/restreamer/overlays",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "appRole": "app",
+    "labels": null,
+    "annotations": null
+  }

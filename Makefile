@@ -15,7 +15,7 @@ $(ENVS): $(APPS)
 $(APPS):
 	flagops generate -r -s apps/$@/overlays/ -d build/apps/$@/overlays/${MAKECMDGOALS}
 	@mkdir -p build/apps/$@
-	cp -r apps/$@/base build/apps/$@
+	cp -r apps/$@/base build/apps/$@ || echo "No base files found"
 	@echo "Built $@"
 
 .PHONY: bootstrap

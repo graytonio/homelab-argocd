@@ -1,0 +1,19 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: restreamer-config
+spec:
+  accessModes: [ "ReadWriteMany" ]
+  resources:
+   requests:
+     storage: 2Gi
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: restreamer-data
+spec:
+  accessModes: [ "ReadWriteMany" ]
+  resources:
+   requests:
+     storage: 2Gi

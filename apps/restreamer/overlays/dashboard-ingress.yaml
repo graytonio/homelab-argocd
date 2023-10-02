@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: restreamer
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: "{% if traefik_ssl_enabled %}websecure{% else %}web{% endif %}"
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: Restreamer
+    gethomepage.dev/group: Operations
+    gethomepage.dev/icon: pi-hole.png
+    gethomepage.dev/name: Restramer
+  labels:
+    app.kubernetes.io/name: restreamer
+spec:
+  rules:
+  - host: stream.{{ env_base_domain }}
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: restreamer-dashboard
+            port: 
+              name: web
