@@ -6,7 +6,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Restreamer
-    gethomepage.dev/group: Operations
+    gethomepage.dev/group: Streaming
     gethomepage.dev/icon: twitch.png
     gethomepage.dev/name: Restramer
   labels:
