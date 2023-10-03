@@ -8,6 +8,10 @@ http:
       loadBalancer:
         servers:
           - url: http://192.168.20.10:8123
+    uptimex:
+      loadBalancer:
+        servers:
+          - url: http://45.33.103.121:3001/
   routers:
     vault:
       entryPoints:
@@ -19,3 +23,8 @@ http:
         - websecure
       service: home
       rule: Host(`home.graytonward.com`) && PathPrefix(`/`)
+    uptimex:
+      entryPoints:
+        - websecure
+      service: uptimex
+      rule: Host(`uptimex.graytonward.com`) && PathPrefix(`/`)
