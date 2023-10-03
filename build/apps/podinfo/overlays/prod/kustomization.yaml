@@ -6,3 +6,4 @@ commonLabels:
   app.kubernetes.io/managed-by: argocd
 resources:
 - ../../base
+- ingress.yaml
