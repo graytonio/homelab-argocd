@@ -1,0 +1,12 @@
+version: "3"
+services:
+  webhook-bridge:
+    image: ghcr.io/graytonio/webhook-bridge:latest
+    volumes:
+      - /root/webhook.yaml:/config.yaml
+    ports:
+      - 8080:8080
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

@@ -1,0 +1,10 @@
+log_level: INFO
+listen_address: 0.0.0.0:8080
+webhooks:
+  - path: flagsmith
+    method: POST
+    url: https://api.github.com/repos/graytonio/homelab-argocd/dispatches
+    headers:
+      Authorization: Bearer <Token>
+      Accept: application/vnd.github+json
+    body: '{"event_type": "FLAG_UPDATED"}'
