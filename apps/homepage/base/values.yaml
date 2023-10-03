@@ -11,6 +11,9 @@ config:
       - YouTube:
           href: https://studio.youtube.com/channel/UCYVRYd86F-3zLtyIIyyfrWQ
           icon: youtube
+    - Operations:
+      - Flagsmith:
+          href: https://app.flagsmith.com/
   widgets:
     - kubernetes:
         cluster:
