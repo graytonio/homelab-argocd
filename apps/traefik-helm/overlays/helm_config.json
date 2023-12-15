@@ -1,0 +1,18 @@
+{
+  "appName": "treafik-helm",
+  "userGivenName": "treafik-helm",
+  "destNamespace": "treafik-helm",
+  "chart": "treafik",
+  "repo": "https://traefik.github.io/charts",
+  "version": "v26.0.0",
+  "additionalResources": true,
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "build/apps/treafik-helm/overlays",
+  "basePath": "build/apps/treafik-helm/base",
+  "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+  "srcTargetRevision": "",
+  "syncWave": "-2",
+  "appRole": "infra",
+  "labels": null,
+  "annotations": null
+}
