@@ -9,7 +9,7 @@
   value: --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.cloudflare.acme.email=
+  value: --certificatesresolvers.cloudflare.acme.email=graytonio.ward+cloudflare@gmail.com
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
