@@ -10,7 +10,7 @@
   value: --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --certificatesresolvers.cloudflare.acme.email={{ traefik_ssl.email }}
+  value: --certificatesresolvers.cloudflare.acme.email={{ traefik_ssl.cloudflare_email }}
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --certificatesresolvers.cloudflare.acme.storage=/certs/acme.json
