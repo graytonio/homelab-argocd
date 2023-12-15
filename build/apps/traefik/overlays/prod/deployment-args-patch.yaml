@@ -27,10 +27,10 @@
   value: --entrypoints.websecure.http.tls.certResolver=cloudflare
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.websecure.http.tls.domains[0].main=
+  value: --entrypoints.websecure.http.tls.domains[0].main=graytonward.com
 - op: add
   path: /spec/template/spec/containers/0/args/-
-  value: --entrypoints.websecure.http.tls.domains[0].sans=*.
+  value: --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --providers.file.filename=/config/external-traefik-services.yaml
