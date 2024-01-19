@@ -16,7 +16,11 @@ spec:
       containers:
       - name: palworld
         image: ghcr.io/graytonio/palworld-server:latest
-        args: ["--useperfthreads", "-NoAsyncLoadingThread -UseMultithreadForDS"]
+        args: [
+          "./PalServer.sh",
+          "--useperfthreads", 
+          "-NoAsyncLoadingThread -UseMultithreadForDS"
+        ]
         ports:
           - containerPort: 8221
             protocol: TCP
