@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: palworld
-        image: ghcr.io/graytonio/palworld-server:latest
+        image: ghcr.io/graytonio/palworld-server:473987551a03111f6189f77ea5bd7970f110efe0
         args: [
           "./PalServer.sh",
           "--useperfthreads", 
