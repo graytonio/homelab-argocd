@@ -1,0 +1,10 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: credentials
+spec:
+  encryptedData:
+    DISCORD_CLIENT_ID: {{ ffxivquesttracker.DISCORD_CLIENT_ID }}
+    DISCORD_CLIENT_SECRET: {{ ffxivquesttracker.DISCORD_CLIENT_SECRET }}
+    DB_DSN: {{ ffxivquesttracker.DB_DSN }}
+

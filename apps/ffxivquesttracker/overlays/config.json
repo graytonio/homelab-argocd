@@ -1,0 +1,13 @@
+{
+  "appName": "ffxivquesttracker",
+  "userGivenName": "ffxivquesttracker",
+  "destNamespace": "ffxivquesttracker",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "build/apps/ffxivquesttracker/overlays",
+  "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+  "srcTargetRevision": "",
+  "syncWave": "3",
+  "appRole": "app",
+  "labels": null,
+  "annotations": null
+}
