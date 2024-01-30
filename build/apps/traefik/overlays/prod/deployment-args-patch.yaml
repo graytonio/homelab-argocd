@@ -33,6 +33,12 @@
   value: --entrypoints.websecure.http.tls.domains[0].sans=*.graytonward.com
 - op: add
   path: /spec/template/spec/containers/0/args/-
+  value: --entrypoints.websecure.http.tls.domains[1].main=ffxivquesttracker.app
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --entrypoints.websecure.http.tls.domains[1].sans=*.ffxivquesttracker.app
+- op: add
+  path: /spec/template/spec/containers/0/args/-
   value: --providers.file.filename=/config/external-traefik-services.yaml
 - op: add
   path: /spec/template/spec/containers/0/args/-
