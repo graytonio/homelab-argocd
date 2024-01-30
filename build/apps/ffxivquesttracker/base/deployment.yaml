@@ -13,6 +13,7 @@ spec:
       labels:
         app.kubernetes.io/name: ffxivquesttracker
     spec:
+      replicas: 3
       containers:
       - name: ffxivquesttracker
         image: ghcr.io/graytonio/ffxivquesttracker:sha-210b153
