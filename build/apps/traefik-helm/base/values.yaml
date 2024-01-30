@@ -1,0 +1,7 @@
+ingressClass:
+  isDefaultClass: false
+  name: traefik-helm
+
+ingressRoute:
+  dashboard:
+    enabled: false

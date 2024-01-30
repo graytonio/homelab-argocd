@@ -1,0 +1,13 @@
+{
+    "appName": "palworld",
+    "userGivenName": "palworld",
+    "destNamespace": "palworld",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "build/apps/palworld/overlays",
+    "srcRepoURL": "https://github.com/graytonio/homelab-argocd.git",
+    "srcTargetRevision": "",
+    "syncWave": "-1",
+    "appRole": "app",
+    "labels": null,
+    "annotations": null
+  }
