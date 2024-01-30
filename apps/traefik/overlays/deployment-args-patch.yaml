@@ -32,6 +32,12 @@
 - op: add
   path: /spec/template/spec/containers/0/args/-
   value: --entrypoints.websecure.http.tls.domains[0].sans=*.{{ traefik_ssl.base_domain }}
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --entrypoints.websecure.http.tls.domains[1].main=ffxivquesttracker.app
+- op: add
+  path: /spec/template/spec/containers/0/args/-
+  value: --entrypoints.websecure.http.tls.domains[1].sans=*.ffxivquesttracker.app
 {% endif %}
 
 {% if traefik_ssl_stage_enabled %}
