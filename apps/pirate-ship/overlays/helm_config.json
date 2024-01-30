@@ -4,7 +4,7 @@
   "userGivenName": "pirate-ship",
   "destNamespace": "pirate-ship",
   "chart": "pirate-ship",
-  "repo": "https://charts.graytonward.com/homelab-helm-charts/",
+  "repo": "https://charts.graytonward.com/",
   "version": "0.0.5",
   "destServer": "https://kubernetes.default.svc",
   "additionalResources": true,
