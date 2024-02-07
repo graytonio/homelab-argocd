@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ffxivquesttracker
-        image: ghcr.io/graytonio/ffxivquesttracker:sha-cd70055
+        image: ghcr.io/graytonio/ffxivquesttracker:sha-be8311b
         env:
           - name: GIN_MODE
             value: release
