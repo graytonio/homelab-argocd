@@ -4,7 +4,7 @@
     "destNamespace": "longhorn-system",
     "chart": "longhorn",
     "repo": "https://charts.longhorn.io",
-    "version": "1.5.4",
+    "version": "1.6.0",
     "additionalResources": true,
     "destServer": "https://kubernetes.default.svc",
     "srcPath": "build/apps/longhorn/overlays",
