@@ -1,2 +1,5 @@
 persistence:
   defaultClass: true
+
+preUpgradeChecker:
+  jobEnabled: false
