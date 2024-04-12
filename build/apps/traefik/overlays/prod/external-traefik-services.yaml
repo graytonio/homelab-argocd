@@ -12,6 +12,14 @@ http:
       loadBalancer:
         servers:
           - url: http://45.33.103.121:3001/
+    graphana:
+      loadBalancer:
+        servers:
+          - url: http://173.230.136.136:3000
+    prometheus:
+      loadBalancer:
+        servers:
+          - url: http://173.230.136.136:9090
   routers:
     vault:
       entryPoints:
@@ -28,3 +36,13 @@ http:
         - websecure
       service: uptimex
       rule: Host(`uptimex.graytonward.com`) && PathPrefix(`/`)
+    graphana:
+      entryPoints:
+        - websecure
+      service: graphana
+      rule: Host(`graphana.graytonward.com`) && PathPrefix(`/`)
+    prometheus:
+      entryPoints:
+        - websecure
+      service: prometheus
+      rule: Host(`prometheus.graytonward.com`) && PathPrefix(`/`)
