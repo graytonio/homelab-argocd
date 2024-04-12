@@ -15,11 +15,11 @@ http:
     graphana:
       loadBalancer:
         servers:
-          - url: http://173.230.136.136:3000
+          - url: http://45.33.103.121:3000
     prometheus:
       loadBalancer:
         servers:
-          - url: http://173.230.136.136:9090
+          - url: http://45.33.103.121:9090
   routers:
     vault:
       entryPoints:
